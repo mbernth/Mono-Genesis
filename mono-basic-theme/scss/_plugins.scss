@@ -6,35 +6,34 @@
 
 .enews-widget,
 .enews-widget .widget-title {
-	color: #fff;
+	color: $color-white;
 }
 
 .sidebar .widget.enews-widget {
-	background-color: #333;
+	background-color: $color-black;
 }
 
 .enews-widget input,
 .enews-widget input:focus {
-	border: 1px solid #333;
+	border: 1px solid $color-black;
 }
 
 .enews-widget input {
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font(1.6, 2.4);
 	margin-bottom: 16px;
 }
 
 .enews-widget input[type="submit"] {
-	background-color: #c3251d;
-	color: #fff;
+	background-color: $color-primary-one;
+	color: $color-white;
 	margin: 0;
 	width: 100%;
 }
 
 .enews-widget input:hover[type="submit"],
 .enews-widget input:focus[type="submit"]  {
-	background-color: #fff;
-	color: #333;
+	background-color: darken($color-primary-one, 10%);
+	color: $color-white;
 }
 
 .enews form + p {
@@ -63,6 +62,6 @@
 
 /* Display outline on focus */
 :focus {
-	color: #333;
-	outline: #ccc solid 1px;
+	color: $color-black;
+	outline: $color-primary-one solid 1px;
 }

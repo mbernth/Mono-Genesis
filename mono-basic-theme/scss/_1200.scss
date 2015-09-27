@@ -11,35 +11,27 @@
 	.content-sidebar-sidebar .content-sidebar-wrap,
 	.sidebar-content-sidebar .content-sidebar-wrap,
 	.sidebar-sidebar-content .content-sidebar-wrap {
-		width: 740px;
+		@include structure(740, 960);
 	}
 
 	.content,
 	.site-header .widget-area {
-		width: 620px;
+		@include structure(620, 960);
 	}
 
 	.sidebar-content-sidebar .content,
 	.sidebar-sidebar-content .content,
 	.content-sidebar-sidebar .content {
-		width: 400px;
+		@include structure(400, 960);
 	}
 
 	.sidebar-primary,
 	.title-area {
-		width: 300px;
+		@include structure(300, 960);
 	}
 
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.footer-widgets-3,
-	.sidebar-primary,
-	.title-area {
-		width: 300px;
-	}
-
-	.footer-widgets-1 {
-		margin-right: 30px;
+	.footer-widgets .widget-area {
+		@include grid(3, 40, 960);
 	}
 
 }

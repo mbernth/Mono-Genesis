@@ -6,11 +6,10 @@
 
 .entry {
 	margin-bottom: 40px;
-	padding: 50px 60px;
 }
 
 .content .entry {
-	background-color: #fff;
+	background-color: $color-white;
 }
 
 .entry-content ol,
@@ -33,16 +32,15 @@
 }
 
 .entry-content code {
-	background-color: #333;
-	color: #ddd;
+	background-color: $color-black;
+	color: $color-primary-one;
 }
 
 /* ## Entry Meta
 --------------------------------------------- */
 
 p.entry-meta {
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font(1.6, 2.4);
 	margin-bottom: 0;
 }
 
@@ -51,7 +49,7 @@ p.entry-meta {
 }
 
 .entry-footer .entry-meta {
-	border-top: 2px solid #f5f5f5;
+	border-top: 2px solid $color-white;
 	padding-top: 24px;
 }
 
@@ -82,12 +80,11 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-	background-color: #333;
-	color: #fff;
+	background-color: $color-primary-one;
+	color: $color-white;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font(1.6, 2.4);
 	padding: 8px 12px;
 	text-decoration: none;
 }
@@ -95,8 +92,8 @@ p.entry-meta {
 .archive-pagination li a:hover,
 .archive-pagination li a:focus,
 .archive-pagination .active a {
-	background-color: #c3251d;
-	text-decoration: underline;
+	background-color: darken($color-primary-one, 10%);
+	text-decoration: none;
 }
 
 /* ## Comments
@@ -105,7 +102,7 @@ p.entry-meta {
 .comment-respond,
 .entry-comments,
 .entry-pings {
-	background-color: #fff;
+	border-top:1px solid $color-black;
 	margin-bottom: 40px;
 }
 
@@ -119,13 +116,11 @@ p.entry-meta {
 }
 
 .comment-header {
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font(1.6, 2.4);
 }
 
 li.comment {
-	background-color: #f5f5f5;
-	border: 2px solid #fff;
+	border: 2px solid $color-black;
 	border-right: 0;
 }
 
@@ -166,8 +161,6 @@ li.comment {
 }
 
 .form-allowed-tags {
-	background-color: #f5f5f5;
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font(1.6, 2.4);
 	padding: 24px;
 }

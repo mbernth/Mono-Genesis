@@ -1,61 +1,7 @@
-/* Site Containers
---------------------------------------------- */
-
-.site-inner,
-.wrap {
-	margin: 0 auto;
-	width:90%;
-	max-width: 1140px;
-}
-
-.djf-landing .site-inner {
-	max-width: 1140px;
-}
-
-.site-inner {
-	clear: both;
-	padding-top: 80px;
-}
-
-/* Column Widths and Positions
+/* Grid
 ---------------------------------------------------------------------------------------------------- */
 
-/* Content
---------------------------------------------- */
-
-.content {
-	float:right;
-	@include structure(720, 1140);
-}
-
-.full-width-content .content {
-	float:none;
-	width: 100%;
-	max-width:1140px;
-}
-
-.home.full-width-content .content {
-	max-width:100%;
-}
-
-.content-sidebar .content {
-	float: left;
-}
-
-/*
-Sidebar
---------------------------------------------- */
-
-.sidebar {
-	float:right;
-	@include structure(353, 1140);
-}
-.sidebar-content .sidebar {
-	float: left;
-}
-
-
-/* Grid
+/* Grid Container
 --------------------------------------------- */
 .gridcontainer {
 	display:block;
@@ -71,6 +17,9 @@ Sidebar
 .site-inner .gridcontainer [class*="coll"] p:last-child {
 	margin-bottom:0;
 }
+
+/* Columns
+--------------------------------------------- */
 
 .coll1,
 .coll2,
@@ -90,35 +39,35 @@ Sidebar
 	width:100%;
 }
 .coll2 {
-	@include grid(2, 40, 960);
+	@include grid(2, 40, 1200);
 }
 .coll3 {
-	@include grid(3, 40, 960);
+	@include grid(3, 40, 1200);
 }
 .coll4 {
-	@include grid(4, 40, 960);
+	@include grid(4, 40, 1200);
 }
 .coll5 {
-	@include grid(5, 40, 960);
+	@include grid(5, 40, 1200);
 }
 .coll6 {
-	@include grid(6, 40, 960);
+	@include grid(6, 40, 1200);
 }
 .coll7 {
-	@include grid(7, 40, 960);
+	@include grid(7, 40, 1200);
 }
 .coll8 {
-	@include grid(8, 40, 960);
+	@include grid(8, 40, 1200);
 }
 .coll9 {
-	@include grid(9, 40, 960);
+	@include grid(9, 40, 1200);
 }
 .coll10 {
-	@include grid(10, 40, 960);
+	@include grid(10, 40, 1200);
 }
 .coll11 {
-	@include grid(11, 40, 960);
+	@include grid(11, 40, 1200);
 }
 .coll12 {
-	@include grid(12, 40, 960);
+	@include grid(12, 40, 1200);
 }

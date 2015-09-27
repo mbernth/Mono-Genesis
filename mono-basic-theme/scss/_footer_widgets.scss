@@ -2,28 +2,28 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #333;
+	background-color: $color-primary-one;
 	clear: both;
 	padding-top: 40px;
 }
 
 .footer-widgets,
 .footer-widgets a {
-	color: #aaa;
+	color: $color-white;
 }
 
 .footer-widgets input {
-	border: 1px solid #333;
+	border: 1px solid $color-white;
 }
 
 .footer-widgets a.button,
 .footer-widgets a:hover,
 .footer-widgets a:focus {
-	color: #fff;
+	color: $color-white;
 }
 
 .footer-widgets li {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px solid $color-white;
 	margin-bottom: 10px;
 	padding-bottom: 10px;
 }
@@ -36,21 +36,7 @@
 	margin-bottom: 0;
 }
 
-.footer-widgets-1,
-.footer-widgets-2,
-.footer-widgets-3 {
-	width: 340px;
-}
-
-.footer-widgets-1 {
-	margin-right: 60px;
-}
-
-.footer-widgets-1,
-.footer-widgets-2 {
-	float: left;
-}
-
-.footer-widgets-3 {
-	float: right;
+.footer-widgets .widget-area {
+	@include grid(3, 40, 1200);
+	float:left;
 }

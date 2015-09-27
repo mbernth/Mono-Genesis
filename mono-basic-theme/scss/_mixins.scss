@@ -21,8 +21,8 @@ $color-primary-one_rgb: rgb(0, 174, 239) ; /* Cyan */
 --------------------------------------------- */
 
 /* Primary Font Faminly */
-$font-sans: 'Merriweather', serif;
-$font-headlines: 'Merriweather', serif;
+$font-sans: 'Lato, sans-serif;
+$font-headlines: 'Lato, sans-serif;
 
 /* Basic Font Sizes mixin */
 @mixin font-size($sizeValue: 1.6) {
@@ -43,7 +43,7 @@ $font-headlines: 'Merriweather', serif;
 }
 
 p.standard {
-	@include font(1.6, 2.4);
+	@include font(1.8, 2.6);
 }
 
 /* Border Radius

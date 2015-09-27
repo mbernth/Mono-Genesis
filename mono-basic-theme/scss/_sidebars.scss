@@ -2,12 +2,11 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font(1.6, 2.4);
 }
 
 .sidebar li {
-	border-bottom: 1px dotted #ddd;
+	border-bottom: 1px solid $color-black;
 	margin-bottom: 10px;
 	padding-bottom: 10px;
 }
@@ -18,7 +17,6 @@
 }
 
 .sidebar .widget {
-	background-color: #fff;
 	margin-bottom: 40px;
-	padding: 40px;
+	padding-bottom: 40px;
 }

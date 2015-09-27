@@ -2,12 +2,15 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #fff;
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1;
-	padding: 40px 0;
+	background-color: darken($color-primary-one, 10%);
+	@include font(1.4, 2.0);
+	padding: 20px 0;
 	text-align: center;
+}
+
+.site-footer a{
+	color:$color-white;
+	text-decoration:none;
 }
 
 .site-footer p {
