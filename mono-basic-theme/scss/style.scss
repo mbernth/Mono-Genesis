@@ -1,0 +1,117 @@
+/* # Mono Basic Child Theme
+Theme Name: Mono Basic Theme
+Theme URI: https://github.com/mbernth/Mono-Genesis
+Description: This is a basic child theme created for the Genesis Framework.
+Author: mono voce aps
+Author URI: http://www.monovoce.com/
+Template: genesis
+Template Version: 1.0.0
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/* # Table of Contents
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+*/
+	@import "reset";
+/*
+- Mixins
+*/
+	@import "mixins";
+/*
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Gallery
+	- Forms
+	- Tables
+	- Screen Reader Text
+*/
+	@import "defaults";
+/*
+- Structure and Layout
+	- Site Containers
+	- Column Widths and Positions
+	- Column Classes
+*/
+	@import "structure_layout";
+/*
+- Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
+*/
+	@import "common_classes";
+/*
+- Widgets
+	- Featured Content
+*/
+	@import "widgets";
+/*
+- Plugins
+	- Genesis eNews Extended
+	- Jetpack
+*/
+	@import "plugins";
+/*
+- Site Header
+	- Title Area
+	- Widget Area
+*/
+	@import "site_header";
+/*
+- Site Navigation
+	- Accessible Menu
+	- Site Header Navigation
+	- Primary Navigation
+	- Secondary Navigation
+	- Skip Links
+*/
+	@import "site_navigation";
+/*
+- Content Area
+	- Entries
+	- Entry Meta
+	- Pagination
+	- Comments
+*/
+	@import "content_area";
+/*
+- Sidebars
+*/
+	@import "sidebars";
+/*
+- Footer Widgets
+*/
+	@import "footer_widgets";
+/*
+- Site Footer
+*/
+	@import "site_footer";
+/*
+- Media Queries
+	- Retina Display
+	- Max-width: 1200px
+*/
+	@import "1200";
+/*
+	- Max-width: 960px
+*/
+	@import "960";
+/*
+	- Max-width: 800px
+*/
+	@import "800";
+/*
+- Print Styles
+*/
+	@import "print_styles";
+/*
+*/
