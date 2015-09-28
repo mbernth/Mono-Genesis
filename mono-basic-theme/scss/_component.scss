@@ -1,0 +1,198 @@
+.entry-content ul.og-grid {
+	display:block;
+	float:left;
+	margin:40px 0 0 0;
+	padding:0;
+	width:100%;
+}
+.og-grid {
+	list-style: none;
+	text-align: center;
+}
+
+.og-grid li {
+	display: block;
+	float:left;
+	margin-bottom:40px;
+	@include grid(4, 40, 1200);
+}
+.og-grid li:nth-child(5n){
+	clear:left;
+}
+.og-grid li > a,
+.og-grid li > a img {
+	border: none;
+	outline: none;
+	display: block;
+	position: relative;
+}
+
+.og-grid li.og-expanded > a::after {
+	top: auto;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: $color-primary-one;
+	border-width: 15px;
+	left: 50%;
+	margin: -20px 0 0 -15px;
+}
+
+.og-expander {
+	position: absolute;
+	background: $color-primary-one;
+	top: auto;
+	left: 0;
+	width: 100%;
+	margin-top: 10px;
+	text-align: left;
+	height: 0;
+	overflow: hidden;
+	z-index:1000;
+}
+
+.og-expander-inner {
+	padding: 50px 30px;
+	height: 100%;
+	color: $color-white;
+}
+
+.og-close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.og-close::before,
+.og-close::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	height: 1px;
+	background: $color-white;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.og-close::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.og-close:hover::before,
+.og-close:hover::after {
+	background: $color-black;
+}
+
+.og-fullimg,
+.og-details {
+	width: 50%;
+	float: left;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.og-details {
+	padding: 0 40px 0 20px;
+}
+
+.og-fullimg {
+	text-align: center;
+}
+
+.og-fullimg img {
+	display: inline-block;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.og-details h3 {
+	font-weight: 300;
+	@include font(3, 3.2);
+	padding: 40px 0 10px;
+	margin-bottom: 10px;
+	color: $color-white;
+}
+
+.og-details p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: $color-white;
+}
+
+.og-details a {
+	background-color: $color-white;
+	border: 0;
+	color: $color-primary-one;
+	cursor: pointer;
+	@include font(1.8, 2.6);
+	font-weight: 400;
+	text-decoration:none;
+	padding: 16px 24px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.og-details a:hover {
+	background-color: darken($color-primary-one, 20%);
+	color: $color-white;
+}
+
+.og-loading {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: $color-white;
+	box-shadow: 0 0 1px $color-white, 15px 30px 1px $color-white, -15px 30px 1px $color-white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	-webkit-animation: loader 0.5s infinite ease-in-out both;
+	-moz-animation: loader 0.5s infinite ease-in-out both;
+	animation: loader 0.5s infinite ease-in-out both;
+}
+
+@-webkit-keyframes loader {
+	0% { background: $color-white; }
+	33% { background: $color-white; box-shadow: 0 0 1px $color-white, 15px 30px 1px $color-white, -15px 30px 1px $color-white; }
+	66% { background: $color-white; box-shadow: 0 0 1px $color-white, 15px 30px 1px $color-white, -15px 30px 1px $color-white; }
+}
+
+@-moz-keyframes loader {
+	0% { background: $color-white; }
+	33% { background: $color-white; box-shadow: 0 0 1px $color-white, 15px 30px 1px $color-white, -15px 30px 1px $color-white; }
+	66% { background: $color-white; box-shadow: 0 0 1px $color-white, 15px 30px 1px $color-white, -15px 30px 1px $color-white; }
+}
+
+@keyframes loader {
+	0% { background: $color-white; }
+	33% { background: $color-white; box-shadow: 0 0 1px $color-white, 15px 30px 1px $color-white, -15px 30px 1px $color-white; }
+	66% { background: $color-white; box-shadow: 0 0 1px $color-white, 15px 30px 1px $color-white, -15px 30px 1px $color-white; }
+}
+
+@media screen and (max-width: 800px) {
+
+	.og-expander h3 { @include font(2.4, 3.2); }
+	.og-expander p { @include font(1.6, 2.4); }
+	.og-expander a { @include font(1.6, 2.4); }
+
+}
+
+@media screen and (max-width: 800px) {
+
+	.og-fullimg { display: none; }
+	.og-details { float: none; width: 100%; }
+	
+}

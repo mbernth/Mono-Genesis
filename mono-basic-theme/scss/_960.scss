@@ -22,6 +22,19 @@
 		width: 100%;
 	}
 	
+	.og-grid li {
+		@include grid(2, 40, 800);
+	}
+	
+	.og-grid li:nth-child(3n){
+		clear:left;
+	}
+	
+	.og-grid li:nth-child(3n){
+		clear: none;
+	}
+	
+	
 	.footer-widgets .widget-area {
 		@include grid(1, 0, 800);
 	}
