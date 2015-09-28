@@ -2,6 +2,8 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
+	position:relative;
+	z-index:1200;
 	background-color: darken($color-primary-one, 10%);
 	@include font(1.4, 2.0);
 	padding: 20px 0;

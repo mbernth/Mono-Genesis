@@ -78,6 +78,34 @@ function mono_favicon_filter( $favicon ) {
 
 }
 
+//* Unregister the header right widget area
+unregister_sidebar( 'header-right' );
+
+//* Reposition the primary navigation menu
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_header', 'genesis_do_nav', 12 );
+
+//* Remove output of primary navigation right extras
+remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
+remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
+
+//* Reposition the secondary navigation menu
+remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+add_action( 'genesis_header', 'genesis_do_subnav', 5 );
+
+//* Add secondary-nav class if secondary navigation is used
+add_filter( 'body_class', 'crone_secondary_nav_class' );
+function crone_secondary_nav_class( $classes ) {
+
+	$menu_locations = get_theme_mod( 'nav_menu_locations' );
+
+	if ( ! empty( $menu_locations['secondary'] ) ) {
+		$classes[] = 'secondary-nav';
+	}
+	return $classes;
+
+}
+
 //* Add support for custom background
 add_theme_support( 'custom-background' );
 
@@ -111,8 +139,38 @@ function beautiful_before_header() {
 //* Register widget areas
 genesis_register_sidebar( array(
 	'id'          => 'before-header',
-	'name'        => __( 'Before Header', 'beautiful' ),
-	'description' => __( 'This is the before header widget area.', 'beautiful' ),
+	'name'        => __( 'Before Header', 'mono' ),
+	'description' => __( 'This is the before header widget area.', 'mono' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-1',
+	'name'        => __( 'Front Page 1', 'mono' ),
+	'description' => __( 'This is the front page 1 section.', 'mono' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-2',
+	'name'        => __( 'Front Page 2', 'mono' ),
+	'description' => __( 'This is the front page 2 section.', 'mono' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-3',
+	'name'        => __( 'Front Page 3', 'mono' ),
+	'description' => __( 'This is the front page 3 section.', 'mono' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-4',
+	'name'        => __( 'Front Page 4', 'mono' ),
+	'description' => __( 'This is the front page 4 section.', 'mono' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-5',
+	'name'        => __( 'Front Page 5', 'mono' ),
+	'description' => __( 'This is the front page 5 section.', 'mono' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-6',
+	'name'        => __( 'Front Page 6', 'mono' ),
+	'description' => __( 'This is the front page 6 section.', 'mono' ),
 ) );
 
 //* Add svg upload

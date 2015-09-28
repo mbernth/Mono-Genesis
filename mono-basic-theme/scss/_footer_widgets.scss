@@ -2,6 +2,8 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
+	position:relative;
+	z-index:1200;
 	background-color: $color-primary-one;
 	clear: both;
 	padding-top: 40px;
