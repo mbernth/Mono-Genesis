@@ -8,6 +8,12 @@ include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 //* Set Localization (do not remove)
 load_child_theme_textdomain( 'mono', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'mono' ) );
 
+//* Add Image upload and Color select to WordPress Theme Customizer
+require_once( get_stylesheet_directory() . '/lib/customize.php' );
+
+//* Include Customizer CSS
+include_once( get_stylesheet_directory() . '/lib/output.php' );
+
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Mono Basic Theme', 'mono' ) );
 define( 'CHILD_THEME_URL', 'https://github.com/mbernth/Mono-Genesis' );

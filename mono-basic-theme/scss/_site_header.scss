@@ -4,7 +4,7 @@
 .site-header {
 	display: block;
 	position:fixed;
-	background-color: transparent;
+	background-color: rgba(255, 255, 255, 0);
 	width:100%;
 	z-index:1200;
 }
@@ -21,8 +21,8 @@
 
 .title-area {
 	float: left;
-	padding: 0;
-	width: 150px;
+	padding: 20px 0 0;
+	width: 100%;
 }
 
 .header-full-width .title-area {
@@ -42,7 +42,7 @@
 .header-image .site-title > a {
 	background: url(images/logo.png) no-repeat center;
 	float: left;
-	min-height: 75px;
+	min-height: 96px;
 	width: 100%;
 }
 

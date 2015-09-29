@@ -1,3 +1,13 @@
+.sl-content [class*="front-page-"] {
+	background-attachment: fixed;
+    background-color: $color-white;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
 .sl-slider-wrapper {
 	width: 800px;
 	height: 400px;
@@ -109,6 +119,6 @@
 }
 
 .sl-slide-vertical .sl-slide-inner {
-	background: #ccc;
+	background-color: #ccc;
 }
 

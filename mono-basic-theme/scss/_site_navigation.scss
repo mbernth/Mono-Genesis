@@ -126,11 +126,13 @@
 --------------------------------------------- */
 
 .nav-primary {
+	display:block;
+	float:left;
+	width:100%;
 	text-align:center;
 }
 
 .nav-primary .genesis-nav-menu {
-	float:right;
 }
 
 .nav-primary .genesis-nav-menu a {
