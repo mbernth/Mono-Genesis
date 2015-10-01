@@ -14,6 +14,9 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 //* Include Customizer CSS
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
+//* Include Fullscreen Slit Slider Widget
+include_once( get_stylesheet_directory() . '/lib/FullscreenSlitSlider.php' );
+
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Mono Basic Theme', 'mono' ) );
 define( 'CHILD_THEME_URL', 'https://github.com/mbernth/Mono-Genesis' );
@@ -296,3 +299,45 @@ function mono_flexible_gridset() {
 
 }
 add_action( 'genesis_entry_content', 'mono_flexible_gridset', 15 );
+
+
+// Fullscreen Slit Slider Widget
+add_filter('dynamic_sidebar_params', 'my_dynamic_sidebar_params');
+function my_dynamic_sidebar_params( $params ) {
+	
+	// get widget vars
+	$widget_name = $params[0]['widget_name'];
+	$widget_id = $params[0]['widget_id'];
+	
+	
+	// bail early if this widget is not a Text widget
+	if( $widget_name != 'Fullscreen Slit Slider' ) {
+		
+		return $params;
+		
+	}
+	
+	if ( get_field('content', 'widget_' . $widget_id)) {
+		
+		if( have_rows('content') ):
+			echo 'content here';
+		endif;
+		
+	}
+	
+	// add color style to before_widget
+	$stuff = get_field('content', 'widget_' . $widget_id);
+	
+	if( $stuff ) {
+		
+		$params[0]['before_widget'] .= '<p>';
+		$params[0]['before_widget'] .= sprintf('Hello %s Goodbye', $widget_id, $stuff);
+		$params[0]['before_widget'] .= '</p>';
+		
+	}
+
+	
+	// return
+	return $params;
+
+}
