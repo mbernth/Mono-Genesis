@@ -181,6 +181,11 @@ genesis_register_sidebar( array(
 	'name'        => __( 'Front Page 6', 'mono' ),
 	'description' => __( 'This is the front page 6 section.', 'mono' ),
 ) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-slider',
+	'name'        => __( 'Front Page Slider', 'mono' ),
+	'description' => __( 'This is the front page Slider section.', 'mono' ),
+) );
 
 //* Add svg upload
 function cc_mime_types($mimes) {
@@ -317,27 +322,58 @@ function my_dynamic_sidebar_params( $params ) {
 		
 	}
 	
-	if ( get_field('content', 'widget_' . $widget_id)) {
+	echo '<div class="sl-slide bg-1" data-orientation="vertical" data-slice1-rotation="0" data-slice2-rotation="0" data-slice1-scale="0" data-slice2-scale="0">';
+	
+	if ( get_field('image', 'widget_' . $widget_id)) {
 		
-		if( have_rows('content') ):
-			echo 'content here';
-		endif;
+		$image = get_field('image', 'widget_' . $widget_id);
+		
+		echo '<div class="sl-slide-inner front-page-1" style="background-image:url(' . $image. ');">';
+		
+	}else{
+		
+		echo '<div class="sl-slide-inner">';
 		
 	}
 	
-	// add color style to before_widget
-	$stuff = get_field('content', 'widget_' . $widget_id);
-	
-	if( $stuff ) {
+	if ( get_field('headline', 'widget_' . $widget_id)) {
 		
-		$params[0]['before_widget'] .= '<p>';
-		$params[0]['before_widget'] .= sprintf('Hello %s Goodbye', $widget_id, $stuff);
-		$params[0]['before_widget'] .= '</p>';
+		$headline = get_field('headline', 'widget_' . $widget_id);
+		
+		echo '<h3>' . $headline. '</h3>';
+		
+	}
+	
+	if ( get_field('text', 'widget_' . $widget_id)) {
+		
+		$text = get_field('text', 'widget_' . $widget_id);
+		
+		echo '' . $text. '';
 		
 	}
 
+	echo '</div></div>';
 	
 	// return
 	return $params;
 
+}
+
+//* Add markup for front page widgets
+add_action( 'genesis_entry_content', 'mono_front_page_slider', 1 );
+function mono_front_page_slider() {
+	
+	genesis_widget_area( 'front-page-slider', array(
+		'before' => '<div class="container image-section"><div id="slider" class="sl-slider-wrapper image-section"><div class="sl-slider">',
+		'after'  => '</div></div>',
+	) );
+	
+	echo '</div>';
+	echo '<nav id="nav-arrows" class="nav-arrows">
+				<span class="nav-arrow-prev">Previous</span>
+				<span class="nav-arrow-next">Next</span>
+		  </nav>';
+
+	echo '</div></div>';
+	
 }
