@@ -14,9 +14,6 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 //* Include Customizer CSS
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
-//* Include Fullscreen Slit Slider Widget
-include_once( get_stylesheet_directory() . '/lib/FullscreenSlitSlider.php' );
-
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Mono Basic Theme', 'mono' ) );
 define( 'CHILD_THEME_URL', 'https://github.com/mbernth/Mono-Genesis' );
@@ -207,87 +204,87 @@ function mono_flexible_gridset() {
 
         	if( get_row_layout() == 'full_width_column' ):
 				echo '<div class="gridcontainer">';
-					echo '<div class="gridcoll1">';
+					echo '<div class="coll1">';
         				the_sub_field('gridset_1_1');
 					echo '</div>';
 				echo '</div>';
 				
         	elseif( get_row_layout() == 'two_columns' ):
 				echo '<div class="gridcontainer">';
-					echo '<div class="gridcoll2">';
+					echo '<div class="coll2">';
         				the_sub_field('gridset_2_1');
 					echo '</div>';
-					echo '<div class="gridcoll2">';
+					echo '<div class="coll2">';
 						the_sub_field('gridset_2_2');
 					echo '</div>';
 				echo '</div>';
 				
 			elseif( get_row_layout() == 'three_columns' ):
 				echo '<div class="gridcontainer">';
-					echo '<div class="gridcoll3">';
+					echo '<div class="coll3">';
         				the_sub_field('gridset_3_1');
 					echo '</div>';
-					echo '<div class="gridcoll3">';
+					echo '<div class="coll3">';
 						the_sub_field('gridset_3_2');
 					echo '</div>';
-					echo '<div class="gridcoll3">';
+					echo '<div class="coll3">';
 						the_sub_field('gridset_3_3');
 					echo '</div>';
 				echo '</div>';
 				
 			elseif( get_row_layout() == 'four_columns' ):
 				echo '<div class="gridcontainer">';
-					echo '<div class="gridcoll4">';
+					echo '<div class="coll4">';
         				the_sub_field('gridset_4_1');
 					echo '</div>';
-					echo '<div class="gridcoll4">';
+					echo '<div class="coll4">';
 						the_sub_field('gridset_4_2');
 					echo '</div>';
-					echo '<div class="gridcoll4">';
+					echo '<div class="coll4">';
 						the_sub_field('gridset_4_3');
 					echo '</div>';
-					echo '<div class="gridcoll4">';
+					echo '<div class="coll4">';
 						the_sub_field('gridset_4_4');
 					echo '</div>';
 				echo '</div>';
 				
 			elseif( get_row_layout() == 'five_columns' ):
 				echo '<div class="gridcontainer">';
-					echo '<div class="gridcoll5">';
+					echo '<div class="coll5">';
         				the_sub_field('gridset_5_1');
 					echo '</div>';
-					echo '<div class="gridcoll5">';
+					echo '<div class="coll5">';
 						the_sub_field('gridset_5_2');
 					echo '</div>';
-					echo '<div class="gridcoll5">';
+					echo '<div class="coll5">';
 						the_sub_field('gridset_5_3');
 					echo '</div>';
-					echo '<div class="gridcoll5">';
+					echo '<div class="coll5">';
 						the_sub_field('gridset_5_4');
 					echo '</div>';
-					echo '<div class="gridcoll5">';
+					echo '<div class="coll5">';
 						the_sub_field('gridset_5_5');
 					echo '</div>';
 				echo '</div>';
 				
 			elseif( get_row_layout() == 'six_columns' ):
 				echo '<div class="gridcontainer">';
-					echo '<div class="gridcoll6">';
+					echo '<div class="coll6">';
         				the_sub_field('gridset_6_1');
 					echo '</div>';
-					echo '<div class="gridcoll6">';
+					echo '<div class="coll6">';
 						the_sub_field('gridset_6_2');
 					echo '</div>';
-					echo '<div class="gridcoll6">';
+					echo '<div class="coll6">';
 						the_sub_field('gridset_6_3');
 					echo '</div>';
-					echo '<div class="gridcoll6">';
+					echo '<div class="coll6">';
 						the_sub_field('gridset_6_4');
 					echo '</div>';
-					echo '<div class="gridcoll6">';
+					echo '<div class="coll6">';
 						the_sub_field('gridset_6_5');
 					echo '</div>';
-					echo '<div class="gridcoll6">';
+					echo '<div class="coll6">';
 						the_sub_field('gridset_6_6');
 					echo '</div>';
 				echo '</div>';
@@ -304,76 +301,3 @@ function mono_flexible_gridset() {
 
 }
 add_action( 'genesis_entry_content', 'mono_flexible_gridset', 15 );
-
-
-// Fullscreen Slit Slider Widget
-add_filter('dynamic_sidebar_params', 'my_dynamic_sidebar_params');
-function my_dynamic_sidebar_params( $params ) {
-	
-	// get widget vars
-	$widget_name = $params[0]['widget_name'];
-	$widget_id = $params[0]['widget_id'];
-	
-	
-	// bail early if this widget is not a Text widget
-	if( $widget_name != 'Fullscreen Slit Slider' ) {
-		
-		return $params;
-		
-	}
-	
-	echo '<div class="sl-slide bg-1" data-orientation="vertical" data-slice1-rotation="0" data-slice2-rotation="0" data-slice1-scale="0" data-slice2-scale="0">';
-	
-	if ( get_field('image', 'widget_' . $widget_id)) {
-		
-		$image = get_field('image', 'widget_' . $widget_id);
-		
-		echo '<div class="sl-slide-inner front-page-1" style="background-image:url(' . $image. ');">';
-		
-	}else{
-		
-		echo '<div class="sl-slide-inner">';
-		
-	}
-	
-	if ( get_field('headline', 'widget_' . $widget_id)) {
-		
-		$headline = get_field('headline', 'widget_' . $widget_id);
-		
-		echo '<h3>' . $headline. '</h3>';
-		
-	}
-	
-	if ( get_field('text', 'widget_' . $widget_id)) {
-		
-		$text = get_field('text', 'widget_' . $widget_id);
-		
-		echo '' . $text. '';
-		
-	}
-
-	echo '</div></div>';
-	
-	// return
-	return $params;
-
-}
-
-//* Add markup for front page widgets
-add_action( 'genesis_entry_content', 'mono_front_page_slider', 1 );
-function mono_front_page_slider() {
-	
-	genesis_widget_area( 'front-page-slider', array(
-		'before' => '<div class="container image-section"><div id="slider" class="sl-slider-wrapper image-section"><div class="sl-slider">',
-		'after'  => '</div></div>',
-	) );
-	
-	echo '</div>';
-	echo '<nav id="nav-arrows" class="nav-arrows">
-				<span class="nav-arrow-prev">Previous</span>
-				<span class="nav-arrow-next">Next</span>
-		  </nav>';
-
-	echo '</div></div>';
-	
-}

@@ -32,6 +32,8 @@ class My_Widget extends WP_Widget {
 			array( 'description' => __( 'Fullscreen Slit Slider!', 'text_domain' ), ) // Args
 		);
 	}
+	
+	
 
 	/**
 	 * Front-end display of widget.
@@ -42,14 +44,20 @@ class My_Widget extends WP_Widget {
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args, $instance ) {
+		
 		/*
      	echo $args['before_widget'];
+		
+		
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 		}
+		*/
+		/*
 		echo '<p>';
 		echo __( 'Hello, World!', 'text_domain' );
 		echo '</p>';
+		
 		echo $args['after_widget'];
 		*/
 	}
@@ -62,6 +70,7 @@ class My_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
+		/*
 		if ( isset( $instance[ 'title' ] ) ) {
 			$title = $instance[ 'title' ];
 		}
@@ -74,6 +83,7 @@ class My_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<?php 
+		*/
 	}
 	
 
@@ -89,9 +99,12 @@ class My_Widget extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
+		$headline = array();
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		$headline['headline'] = ( ! empty( $new_instance['headline'] ) ) ? strip_tags( $new_instance['headline'] ) : '';
 
 		return $instance;
+		return $headline;
 	}
 
 } // class My_Widget

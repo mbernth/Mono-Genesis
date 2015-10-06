@@ -55,8 +55,10 @@
 }
 
 .og-expander-inner {
-	padding: 50px 30px;
-	height: 100%;
+	margin:0 auto;
+	padding: 50px 0px;
+	height: 90%;
+	max-width:1200px;
 	color: $color-white;
 }
 
@@ -103,11 +105,11 @@
 }
 
 .og-details {
-	padding: 0 40px 0 20px;
+	padding: 0;
 }
 
 .og-fullimg {
-	text-align: center;
+	text-align: left;
 }
 
 .og-fullimg img {

@@ -123,6 +123,7 @@
 	border-radius: 50%;
 }
 
+.sl-content h3,
 .sl-content h3.widget-title {
 	color: $color-white;
 	text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
@@ -140,6 +141,7 @@
 	margin: 0 0 -120px 0;
 }
 
+.sl-slide .slider-text,
 .sl-slide .textwidget {
 	position: absolute;
 	width: 100%;
@@ -154,6 +156,7 @@
 	padding: 0;
 }
 
+.sl-slide p,
 .sl-slide .textwidget p{
 	margin: 0 auto;
 	width: 60%;
@@ -321,6 +324,7 @@
 	-ms-animation: fadeOut 1s ease-in-out both;
 	animation: fadeOut 1s ease-in-out both;
 }
+.sl-trans-back-elems .slider-text,
 .sl-trans-back-elems .textwidget{
 	-webkit-animation: fadeOut 1s linear both;
 	-moz-animation: fadeOut 1s linear both;

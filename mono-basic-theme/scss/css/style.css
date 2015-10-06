@@ -630,10 +630,11 @@ th {
 
 .site-inner {
   clear: both;
-  padding-top: 40px; }
+  padding-top: 210px; }
 
 .front-page .site-container .site-inner {
   margin-top: 0;
+  padding-top: 0;
   width: 100%;
   max-width: 100%; }
 
@@ -1177,8 +1178,10 @@ img.alignright,
   z-index: 1000; }
 
 .og-expander-inner {
-  padding: 50px 30px;
-  height: 100%;
+  margin: 0 auto;
+  padding: 50px 0px;
+  height: 90%;
+  max-width: 1200px;
   color: #ffffff; }
 
 .og-close {
@@ -1219,10 +1222,10 @@ img.alignright,
   position: relative; }
 
 .og-details {
-  padding: 0 40px 0 20px; }
+  padding: 0; }
 
 .og-fullimg {
-  text-align: center; }
+  text-align: left; }
 
 .og-fullimg img {
   display: inline-block;
@@ -1542,6 +1545,7 @@ img.alignright,
   box-shadow: inset 0 0 0 10px #f7f7f7;
   border-radius: 50%; }
 
+.sl-content h3,
 .sl-content h3.widget-title {
   color: #ffffff;
   text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
@@ -1561,6 +1565,7 @@ img.alignright,
   bottom: 50%;
   margin: 0 0 -120px 0; }
 
+.sl-slide .slider-text,
 .sl-slide .textwidget {
   position: absolute;
   width: 100%;
@@ -1577,6 +1582,7 @@ img.alignright,
   margin: 0 0 -200px 0;
   padding: 0; }
 
+.sl-slide p,
 .sl-slide .textwidget p {
   margin: 0 auto;
   width: 60%;
@@ -1718,6 +1724,7 @@ img.alignright,
   -ms-animation: fadeOut 1s ease-in-out both;
   animation: fadeOut 1s ease-in-out both; }
 
+.sl-trans-back-elems .slider-text,
 .sl-trans-back-elems .textwidget {
   -webkit-animation: fadeOut 1s linear both;
   -moz-animation: fadeOut 1s linear both;
@@ -2200,6 +2207,9 @@ img.alignright,
 --------------------------------------------- */
 .entry {
   margin-bottom: 40px; }
+
+.front-page .entry {
+  margin-bottom: 0px; }
 
 .content .entry {
   background-color: #ffffff; }
