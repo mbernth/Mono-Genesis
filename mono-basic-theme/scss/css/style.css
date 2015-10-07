@@ -509,7 +509,8 @@ input[type="submit"],
   font-weight: 300;
   padding: 16px 24px;
   text-transform: uppercase;
-  width: auto; }
+  width: auto;
+  text-decoration: none; }
 
 button:hover,
 input:hover[type="button"],
@@ -1449,12 +1450,12 @@ img.alignright,
   position: absolute;
   z-index: 2000;
   top: 50%;
-  width: 40px;
-  height: 40px;
-  border: 8px solid #ddd;
-  border: 8px solid rgba(150, 150, 150, 0.4);
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
   text-indent: -90000px;
-  margin-top: -40px;
+  margin-top: -50px;
   cursor: pointer;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -1463,7 +1464,7 @@ img.alignright,
   transform: rotate(45deg); }
 
 .nav-arrows span:hover {
-  border-color: rgba(150, 150, 150, 0.9); }
+  border-color: rgba(255, 255, 255, 0.9); }
 
 .nav-arrows span.nav-arrow-prev {
   left: 5%;
@@ -1519,14 +1520,14 @@ img.alignright,
   left: 50%;
   margin: 0 0 0 -130px; }
 
+.sl-slide-inner img,
 .sl-content .textwidget img {
   width: 600px;
-  height: 260px;
-  border-radius: 50%;
+  height: auto;
   position: absolute;
   bottom: 50%;
   left: 50%;
-  margin: 0px 0px 110px -209px; }
+  margin: 0px auto 50px -300px; }
 
 [data-icon]:after {
   content: attr(data-icon);
@@ -1549,21 +1550,20 @@ img.alignright,
 .sl-content h3.widget-title {
   color: #ffffff;
   text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  padding: 0;
   position: absolute;
   font-size: 36px;
   font-size: 3.6rem;
-  line-height: 32px;
-  line-height: 3.2rem;
+  line-height: 36px;
+  line-height: 3.6rem;
   font-weight: 700;
   letter-spacing: 13px;
   text-transform: uppercase;
   width: 80%;
   left: 10%;
   text-align: center;
-  line-height: 50px;
   bottom: 50%;
-  margin: 0 0 -120px 0; }
+  margin: 0 0 -50px 0; }
 
 .sl-slide .slider-text,
 .sl-slide .textwidget {
@@ -1579,9 +1579,27 @@ img.alignright,
   color: #ffffff;
   z-index: 2;
   bottom: 50%;
-  margin: 0 0 -200px 0;
+  margin: 0 0 -125px 0;
   padding: 0; }
 
+.sl-slide .slider-link {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 -225px 0;
+  z-index: 2;
+  bottom: 50%; }
+
+.slider-link .button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid #ffffff;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
+
+.slider-link .button:hover,
+.slider-link .button:focus {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.sl-slide a,
 .sl-slide p,
 .sl-slide .textwidget p {
   margin: 0 auto;
@@ -1675,6 +1693,7 @@ img.alignright,
   background-color: #ffffff; }
 
 /* Animations for content elements */
+.sl-trans-elems .sl-slide-inner img,
 .sl-trans-elems .deco {
   /* Roll
   -webkit-animation: roll 1s ease-out both, fadeIn 1s ease-out both;
@@ -1703,6 +1722,7 @@ img.alignright,
   -ms-animation: moveUp 1s ease-in-out both;
   animation: moveUp 1s ease-in-out both; }
 
+.sl-trans-elems .slider-text,
 .sl-trans-elems .textwidget {
   -webkit-animation: fadeIn 0.5s linear 0.5s both;
   -moz-animation: fadeIn 0.5s linear 0.5s both;
@@ -1710,6 +1730,14 @@ img.alignright,
   -ms-animation: fadeIn 0.5s linear 0.5s both;
   animation: fadeIn 0.5s linear 0.5s both; }
 
+.sl-trans-elems .slider-link {
+  -webkit-animation: fadeIn 0.5s linear 1s both;
+  -moz-animation: fadeIn 0.5s linear 1s both;
+  -o-animation: fadeIn 0.5s linear 1s both;
+  -ms-animation: fadeIn 0.5s linear 1s both;
+  animation: fadeIn 0.5s linear 1s both; }
+
+.sl-trans-back-elems .sl-slide-inner img,
 .sl-trans-back-elems .textwidget img {
   -webkit-animation: scaleDown 1s ease-in-out both;
   -moz-animation: scaleDown 1s ease-in-out both;
@@ -1724,6 +1752,7 @@ img.alignright,
   -ms-animation: fadeOut 1s ease-in-out both;
   animation: fadeOut 1s ease-in-out both; }
 
+.sl-trans-back-elems .slider-link,
 .sl-trans-back-elems .slider-text,
 .sl-trans-back-elems .textwidget {
   -webkit-animation: fadeOut 1s linear both;
