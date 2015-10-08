@@ -8,12 +8,6 @@ include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 //* Set Localization (do not remove)
 load_child_theme_textdomain( 'mono', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'mono' ) );
 
-//* Add Image upload and Color select to WordPress Theme Customizer
-require_once( get_stylesheet_directory() . '/lib/customize.php' );
-
-//* Include Customizer CSS
-include_once( get_stylesheet_directory() . '/lib/output.php' );
-
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Mono Basic Theme', 'mono' ) );
 define( 'CHILD_THEME_URL', 'https://github.com/mbernth/Mono-Genesis' );
@@ -147,41 +141,6 @@ genesis_register_sidebar( array(
 	'id'          => 'before-header',
 	'name'        => __( 'Before Header', 'mono' ),
 	'description' => __( 'This is the before header widget area.', 'mono' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-1',
-	'name'        => __( 'Front Page 1', 'mono' ),
-	'description' => __( 'This is the front page 1 section.', 'mono' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-2',
-	'name'        => __( 'Front Page 2', 'mono' ),
-	'description' => __( 'This is the front page 2 section.', 'mono' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-3',
-	'name'        => __( 'Front Page 3', 'mono' ),
-	'description' => __( 'This is the front page 3 section.', 'mono' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-4',
-	'name'        => __( 'Front Page 4', 'mono' ),
-	'description' => __( 'This is the front page 4 section.', 'mono' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-5',
-	'name'        => __( 'Front Page 5', 'mono' ),
-	'description' => __( 'This is the front page 5 section.', 'mono' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-6',
-	'name'        => __( 'Front Page 6', 'mono' ),
-	'description' => __( 'This is the front page 6 section.', 'mono' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-slider',
-	'name'        => __( 'Front Page Slider', 'mono' ),
-	'description' => __( 'This is the front page Slider section.', 'mono' ),
 ) );
 
 //* Add svg upload
