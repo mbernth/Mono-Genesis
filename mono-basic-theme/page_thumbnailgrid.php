@@ -20,6 +20,7 @@ function thumbnail_enqueue_scripts_styles() {
 	wp_enqueue_script( 'thumbnail-grid-init', get_bloginfo( 'stylesheet_directory' ) . '/js/grid_init.js', array( 'jquery' ), '1.0.0', true );
 
 }
+remove_action( 'wp_enqueue_scripts', 'sk_sticky_footer' );
 
 //* Add landing body class to the head
 add_filter( 'body_class', 'mono_add_body_class' );

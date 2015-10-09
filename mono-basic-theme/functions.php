@@ -260,3 +260,25 @@ function mono_flexible_gridset() {
 
 }
 add_action( 'genesis_entry_content', 'mono_flexible_gridset', 15 );
+
+//* STICK FOOTER AT THE BUTTOM
+
+//* Enqueue scripts
+add_action( 'wp_enqueue_scripts', 'sk_sticky_footer' );
+function sk_sticky_footer() {
+	wp_enqueue_script( 'sticky-footer', get_bloginfo( 'stylesheet_directory' ) . '/js/sticky-footer.js', array( 'jquery' ), '1.0.0' );
+ 
+}
+
+//*  Move Footer widgets and Footer outside Site Container 
+//* Reposition the footer widgets
+remove_action( 'genesis_before_footer', 'genesis_footer_widget_areas' );
+add_action( 'genesis_after', 'genesis_footer_widget_areas' );
+ 
+//* Reposition the footer
+remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+add_action( 'genesis_after', 'genesis_footer_markup_open', 11 );
+add_action( 'genesis_after', 'genesis_do_footer', 12 );
+add_action( 'genesis_after', 'genesis_footer_markup_close', 13 );

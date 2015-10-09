@@ -1,6 +1,13 @@
 /* # Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
+.sticky.footer-widgets,
+.sticky.site-footer {
+	position:relative;
+	width: 100%;
+	z-index:1200;
+}
+
 .footer-widgets {
 	position:relative;
 	z-index:1200;
