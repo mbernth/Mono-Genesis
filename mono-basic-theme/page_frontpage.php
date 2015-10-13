@@ -80,10 +80,18 @@ function full_screen_slider() {
 					echo '<div class="sl-slide bg-1" data-orientation="vertical" data-slice1-rotation="0" data-slice2-rotation="0" data-slice1-scale="0" data-slice2-scale="0">';
 					
 						echo '<div class="sl-slide-inner front-page-1" style="background-image:url(' . $row['image']. ');">';
-						echo 	'<img src="' . $row['logo']. '">';
-						echo 	'<h3>' . $row['headline']. '</h3>';
-						echo 	'<div class="slider-text">' . $row['text']. '</div>';
-						echo	'<div class="slider-link"><a class="button" href="#">See the case</a></div>';
+						if( $row['logo'] ){
+							echo 	'<img src="' . $row['logo']. '">';
+						}
+						if( $row['headline'] ){
+							echo 	'<h3>' . $row['headline']. '</h3>';
+						}
+						if( $row['text'] ){
+							echo 	'<div class="slider-text">' . $row['text']. '</div>';
+						}
+						if( $row['link'] ){
+							echo	'<div class="slider-link"><a class="button" href="' . $row['link']. '">See the case</a></div>';
+						}
 						echo '</div> <!-- /sl-slide-inner -->';
 						
 					echo '</div> <!-- /sl-slide -->';
