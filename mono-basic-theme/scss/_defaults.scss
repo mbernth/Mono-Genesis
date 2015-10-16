@@ -10,14 +10,14 @@ html {
 
 /* Chrome fix */
 body > div {
-    @include font(1.6, 2.4);
+    @include font(1.8, 2.6);
 }
 
 body {
 	background-color: $color-white;
 	color: $color-typo_black;
 	font-family: $font-sans;
-	@include font(1.6, 2.4);
+	@include font(1.8, 2.6);
 	font-weight: 300;
 	margin: 0;
 }

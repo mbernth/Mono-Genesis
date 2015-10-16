@@ -268,19 +268,19 @@ html {
 
 /* Chrome fix */
 body > div {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem; }
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 26px;
+  line-height: 2.6rem; }
 
 body {
   background-color: #ffffff;
   color: #231f20;
   font-family: "museo-sans", helvetica, arial, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 26px;
+  line-height: 2.6rem;
   font-weight: 300;
   margin: 0; }
 
@@ -2481,6 +2481,34 @@ li.comment {
   line-height: 24px;
   line-height: 2.4rem;
   padding: 24px; }
+
+/* ## Work
+--------------------------------------------- */
+.image-section {
+  background-attachment: scroll;
+  background-color: #000000;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+.single-work .entry-title {
+  position: absolute;
+  left: 5%;
+  bottom: 70px;
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 42px;
+  line-height: 4.2rem;
+  font-weight: 100;
+  color: #ffffff; }
+
+.single-work .entry-meta {
+  position: absolute;
+  left: 5%;
+  bottom: 50px;
+  color: #ffffff; }
 
 /*
 - Sidebars
