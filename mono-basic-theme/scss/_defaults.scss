@@ -10,14 +10,14 @@ html {
 
 /* Chrome fix */
 body > div {
-    @include font(1.8, 2.6);
+    @include font(1.6, 2.4);
 }
 
 body {
 	background-color: $color-white;
-	color: $color-black;
+	color: $color-typo_black;
 	font-family: $font-sans;
-	@include font(1.8, 2.6);
+	@include font(1.6, 2.4);
 	font-weight: 300;
 	margin: 0;
 }
@@ -45,7 +45,7 @@ a {
 
 a:hover,
 a:focus {
-	color: $color-black;
+	color: $color-typo_black;
 	text-decoration: none;
 }
 
@@ -91,7 +91,7 @@ blockquote {
 blockquote::before {
 	content: "\201C";
 	display: block;
-	@include font(2.4, 3.2);
+	@include font(2, 3);
 	height: 0;
 	left: -20px;
 	position: relative;
@@ -108,9 +108,12 @@ h3,
 h4,
 h5,
 h6 {
-	color: $color-black;
-	font-family: $font-sans;
+	color: $color-typo_black;
+	font-family: $font-headlines;
+	font-style: normal;
 	font-weight: 400;
+	text-transform:uppercase;
+	letter-spacing:-0.1rem;
 	margin: 0 0 10px;
 }
 
@@ -223,8 +226,8 @@ select,
 textarea {
 	background-color: $color-white;
 	border: 1px solid $color-black;
-	color: $color-black;
-	@include font(1.8, 2.6);
+	color: $color-typo_black;
+	@include font(1.6, 2.4);
 	font-weight: 300;
 	padding: 16px;
 	width: 100%;
@@ -243,13 +246,13 @@ input[type="radio"] {
 }
 
 ::-moz-placeholder {
-	color: $color-black;
+	color: $color-typo_black;
 	font-weight: 300;
 	opacity: 1;
 }
 
 ::-webkit-input-placeholder {
-	color: $color-black;
+	color: $color-typo_black;
 	font-weight: 300;
 }
 

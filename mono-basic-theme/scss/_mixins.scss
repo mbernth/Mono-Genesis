@@ -13,6 +13,10 @@ $color-black_rgb: rgb(255, 255, 255) ; /* White */
 $color-black: #000000; /* Black */
 $color-black_rgb: rgb(0, 0, 0) ; /* Black */
 
+/* Typography Black */
+$color-typo_black: #231f20; /* Black */
+$color-black_rgb: rgb(35, 31, 32) ; /* Black */
+
 /* Primary One (Cyan) */
 $color-primary-one: #00aeef; /* 100% Cyan */
 $color-primary-one_rgb: rgb(0, 174, 239) ; /* Cyan */
@@ -21,8 +25,8 @@ $color-primary-one_rgb: rgb(0, 174, 239) ; /* Cyan */
 --------------------------------------------- */
 
 /* Primary Font Faminly */
-$font-sans: 'Lato, sans-serif;
-$font-headlines: 'Lato, sans-serif;
+$font-sans: "museo-sans", helvetica, arial, sans-serif;
+$font-headlines: "industry", helvetica, arial, sans-serif;
 
 /* Basic Font Sizes mixin */
 @mixin font-size($sizeValue: 1.6) {
@@ -43,7 +47,7 @@ $font-headlines: 'Lato, sans-serif;
 }
 
 p.standard {
-	@include font(1.8, 2.6);
+	@include font(1.6, 2.4);
 }
 
 /* Border Radius

@@ -225,6 +225,9 @@ MIXINS
 /* Black */
 /* Black */
 /* Black */
+/* Typography Black */
+/* Black */
+/* Black */
 /* Primary One (Cyan) */
 /* 100% Cyan */
 /* Cyan */
@@ -233,10 +236,10 @@ MIXINS
 /* Primary Font Faminly */
 /* Basic Font Sizes mixin */
 p.standard {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 26px;
-  line-height: 2.6rem; }
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem; }
 
 /* Border Radius
 --------------------------------------------- */
@@ -265,19 +268,19 @@ html {
 
 /* Chrome fix */
 body > div {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 26px;
-  line-height: 2.6rem; }
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem; }
 
 body {
   background-color: #ffffff;
-  color: #000000;
-  font-family: "Lato, sans-serif;\a$font-headlines: " Lato, sans-serif;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  color: #231f20;
+  font-family: "museo-sans", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   font-weight: 300;
   margin: 0; }
 
@@ -302,7 +305,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #000000;
+  color: #231f20;
   text-decoration: none; }
 
 p {
@@ -340,10 +343,10 @@ blockquote {
 blockquote::before {
   content: "\201C";
   display: block;
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 32px;
-  line-height: 3.2rem;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
   height: 0;
   left: -20px;
   position: relative;
@@ -357,9 +360,12 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000000;
-  font-family: "Lato, sans-serif;\a$font-headlines: " Lato, sans-serif;
+  color: #231f20;
+  font-family: "industry", helvetica, arial, sans-serif;
+  font-style: normal;
   font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
   margin: 0 0 10px; }
 
 h1 {
@@ -465,11 +471,11 @@ select,
 textarea {
   background-color: #ffffff;
   border: 1px solid #000000;
-  color: #000000;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 26px;
-  line-height: 2.6rem;
+  color: #231f20;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   font-weight: 300;
   padding: 16px;
   width: 100%; }
@@ -485,12 +491,12 @@ input[type="radio"] {
   width: auto; }
 
 ::-moz-placeholder {
-  color: #000000;
+  color: #231f20;
   font-weight: 300;
   opacity: 1; }
 
 ::-webkit-input-placeholder {
-  color: #000000;
+  color: #231f20;
   font-weight: 300; }
 
 button,
@@ -832,7 +838,7 @@ th {
     margin-right: 0; }
 
 .coll10 {
-  width: 7.0%; }
+  width: 7%; }
   .coll10:nth-child(n) {
     margin-right: 3.3333333333%; }
   .coll10:nth-child(10n) {
@@ -2154,6 +2160,7 @@ img.alignright,
   text-align: left; }
 
 .genesis-nav-menu a {
+  font-family: "industry", helvetica, arial, sans-serif;
   color: #000000;
   font-weight: 400;
   text-decoration: none;
