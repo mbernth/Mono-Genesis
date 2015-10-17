@@ -2110,16 +2110,17 @@ img.alignright,
   color: #000000; }
 
 .header-image .site-title > a {
-  background: url(images/logo.png) no-repeat center;
-  float: left;
-  min-height: 96px;
-  width: 100%; }
+  display: block;
+  margin: 0 auto;
+  background: url(images/monovoce_logo_negative.svg) no-repeat;
+  width: 198px;
+  height: 36px; }
 
 .site-description {
   font-size: 16px;
   font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  line-height: 10px;
+  line-height: 1rem;
   font-weight: 300; }
 
 .site-description,
@@ -2161,11 +2162,12 @@ img.alignright,
 
 .genesis-nav-menu a {
   font-family: "industry", helvetica, arial, sans-serif;
-  color: #000000;
+  color: #ffffff;
+  font-weight: normal;
   font-weight: 400;
   text-decoration: none;
   display: block;
-  padding: 27px 24px;
+  padding: 15px 24px;
   text-transform: uppercase; }
 
 .genesis-nav-menu a:hover,
@@ -2173,7 +2175,7 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus {
-  color: #00aeef;
+  color: #ffffff;
   text-decoration: none; }
 
 .site-header.dark .genesis-nav-menu a {
@@ -2189,12 +2191,13 @@ img.alignright,
 .site-header.dark .genesis-nav-menu a:hover,
 .site-header.dark .genesis-nav-menu a:focus {
   color: #ffffff;
-  box-shadow: inset 0 -70px 0 rgba(255, 255, 255, 0.1); }
+  box-shadow: inset 0 -70px 0 rgba(255, 255, 255, 0); }
 
 .site-header.dark .nav-primary .genesis-nav-menu a:hover,
 .site-header.dark .nav-primary .genesis-nav-menu a:focus,
 .site-header.dark .nav-primary .genesis-nav-menu .current-menu-item > a {
-  color: #00aeef; }
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff; }
 
 .genesis-nav-menu .sub-menu {
   left: -9999px;
@@ -2209,7 +2212,7 @@ img.alignright,
   z-index: 99; }
 
 .genesis-nav-menu .sub-menu a {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0);
   border-bottom: 1px solid #ffffff;
   border-top: 0;
   font-size: 16px;
@@ -2283,14 +2286,22 @@ img.alignright,
   text-align: center; }
 
 .nav-primary .genesis-nav-menu a {
-  color: #00aeef;
-  text-decoration: none; }
+  box-shadow: inset 0 0px 0 #ffffff;
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: box-shadow .3s ease-in-out;
+  -moz-transition: box-shadow .3s ease-in-out;
+  -ms-transition: box-shadow .3s ease-in-out;
+  -o-transition: box-shadow .3s ease-in-out;
+  transition: box-shadow .3s ease-in-out; }
 
 .nav-primary .genesis-nav-menu a:hover,
 .nav-primary .genesis-nav-menu a:focus,
 .nav-primary .genesis-nav-menu .current-menu-item > a {
-  color: #0089bc;
-  text-decoration: none; }
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: inset 0 -70px 0 rgba(255, 255, 255, 0);
+  border-bottom: 1px solid #ffffff; }
 
 .nav-primary .genesis-nav-menu .sub-menu a {
   color: #ffffff; }
@@ -2298,7 +2309,7 @@ img.alignright,
 .nav-primary .genesis-nav-menu .sub-menu a:hover,
 .nav-primary .genesis-nav-menu .sub-menu a:focus,
 .nav-primary .genesis-nav-menu .sub-menu .current-menu-item > a {
-  color: #00aeef;
+  color: #ffffff;
   text-decoration: none; }
 
 /* ## Secondary Navigation

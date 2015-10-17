@@ -282,3 +282,9 @@ remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
 add_action( 'genesis_after', 'genesis_footer_markup_open', 11 );
 add_action( 'genesis_after', 'genesis_do_footer', 12 );
 add_action( 'genesis_after', 'genesis_footer_markup_close', 13 );
+
+//* Modify the Genesis content limit read more link
+add_filter( 'get_the_content_more_link', 'sp_read_more_link' );
+function sp_read_more_link() {
+	return '<a class="button" href="' . get_permalink() . '">Read more</a>';
+}

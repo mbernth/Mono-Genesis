@@ -102,14 +102,15 @@
 }
 
 .header-image .site-title > a {
-	background: url(images/logo.png) no-repeat center;
-	float: left;
-	min-height: 96px;
-	width: 100%;
+	display:block;
+	margin:0 auto;
+	background: url(images/monovoce_logo_negative.svg) no-repeat;
+	width:198px;
+	height: 36px;
 }
 
 .site-description {
-	@include font(1.6, 2.4);
+	@include font(1.6, 1);
 	font-weight: 300;
 }
 

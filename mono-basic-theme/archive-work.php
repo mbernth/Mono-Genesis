@@ -44,9 +44,20 @@ function sk_display_featured_image() {
  
 }
 
-
 //* To remove empty markup, '<p class="entry-meta"></p>' for entries that have not been assigned to any Genre
-remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
+//remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 );
+
+remove_action( 'genesis_entry_meta', 'genesis_entry_meta_markup_open', 5 );
+remove_action( 'genesis_entry_meta', 'genesis_entry_meta_markup_close', 15 );
+
+//* Modify the Genesis content limit read more link
+remove_filter( 'get_the_content_more_link', 'sp_read_more_link' );
+add_filter( 'get_the_content_more_link', 'work_read_more_link' );
+function work_read_more_link() {
+	return '<a class="button work-btn" href="' . get_permalink() . '">See what we did</a>';
+}
 
 //* Run the Genesis loop
 genesis();
