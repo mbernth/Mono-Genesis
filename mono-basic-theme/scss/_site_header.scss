@@ -2,11 +2,11 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header.dark{
-	-webkit-transition: all 0.7s ease-in-out 0.5s;
-	-moz-transition: all 0.7s ease-in-out 0.5s;
-	-ms-transition: all 0.7s ease-in-out 0.5s;
-	-o-transition: all 0.7s ease-in-out 0.5s;
-	transition: all 0.7s ease-in-out 0.5s; 
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out; 
 }
 
 .site-header {
@@ -14,21 +14,23 @@
 	position:fixed;
 	background-color: rgba(0, 0, 0, 0);
 	width:100%;
-	padding:20px 0;
-	z-index:1200;
+	padding:75px 0 0 0;
+	z-index:2000;
 	
-	-webkit-transition: all 0.7s ease-in-out;
-	-moz-transition: all 0.7s ease-in-out;
-	-ms-transition: all 0.7s ease-in-out;
-	-o-transition: all 0.7s ease-in-out;
-	transition: all 0.7s ease-in-out; 
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out; 
+}
+
+.site-header.dark {
+	padding:15px 0;
 }
 
 .site-header .wrap {
 	padding: 0px 0;
-	width:90%;
-	max-width:1200px;
-	
+	width:90%;	
 }
 
 .site-header.dark {
@@ -38,44 +40,47 @@
 }
 
 .site-header.dark .title-area {
-    width: 96px;
-	-webkit-transition: all 0.7s ease-in-out;
-	-moz-transition: all 0.7s ease-in-out;
-	-ms-transition: all 0.7s ease-in-out;
-	-o-transition: all 0.7s ease-in-out;
-	transition: all 0.7s ease-in-out; 
+    width: 46px;
+	height:46px;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out; 
 }
 .title-area {
-    -webkit-transition: all 0.7s ease-in-out;
-	-moz-transition: all 0.7s ease-in-out;
-	-ms-transition: all 0.7s ease-in-out;
-	-o-transition: all 0.7s ease-in-out;
-	transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
 }
 
 .header-image .site-header.dark .site-title > a {
-	background: url(images/smalltile.png) no-repeat center;
-	min-height: 70px;
+	background: url(images/monovoce_logo_negative_symbol.svg) no-repeat left top;
+	height: 46px;
+	width:46px;
+	margin-bottom:0px;
 }
 
 .site-header.dark .nav-primary {
 	float: right;
     width: auto;
-	-webkit-transition: all 0.7s ease-in-out 0.5s ;
-	-moz-transition: all 0.7s ease-in-out 0.5s ;
-	-ms-transition: all 0.7s ease-in-out 0.5s ;
-	-o-transition: all 0.7s ease-in-out 0.5s ;
-	transition: all 0.7s ease-in-out 0.5s ; 
+	-webkit-transition: all 0.4s ease-in-out ;
+	-moz-transition: all 0.4s ease-in-out ;
+	-ms-transition: all 0.4s ease-in-out ;
+	-o-transition: all 0.4s ease-in-out ;
+	transition: all 0.4s ease-in-out ; 
 }
 .site-header.dark .wrap {
 	width:100%;
 }
 .nav-primary {
-	-webkit-transition: all 0.7s ease-in-out 0.5s ;
-	-moz-transition: all 0.7s ease-in-out 0.5s ;
-	-ms-transition: all 0.7s ease-in-out 0.5s ;
-	-o-transition: all 0.7s ease-in-out 0.5s ;
-	transition: all 0.7s ease-in-out 0.5s ;
+	-webkit-transition: all 0.4s ease-in-out ;
+	-moz-transition: all 0.4s ease-in-out ;
+	-ms-transition: all 0.4s ease-in-out ;
+	-o-transition: all 0.4s ease-in-out ;
+	transition: all 0.4s ease-in-out ;
 }
 
 /* ## Title Area
@@ -107,6 +112,7 @@
 	background: url(images/monovoce_logo_negative.svg) no-repeat;
 	width:198px;
 	height: 36px;
+	margin-bottom:25px;
 }
 
 .site-description {

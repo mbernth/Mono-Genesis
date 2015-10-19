@@ -92,8 +92,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	- Entry Meta
 	- Pagination
 	- Comments
+	- Work
 */
 	@import "content_area";
+	@import "work";
 /*
 - Sidebars
 */
@@ -109,6 +111,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*
 - Media Queries
 	- Retina Display
+	- Max-width: 1920px
+*/
+	@import "1920";
+/*
 	- Max-width: 1200px
 */
 	@import "1200";

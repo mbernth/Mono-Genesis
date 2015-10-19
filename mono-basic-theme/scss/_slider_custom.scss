@@ -11,7 +11,7 @@
 .nav-arrows span {
 	position: absolute;
 	z-index: 2000;
-	top: 50%;
+	top: 55%;
 	width: 50px;
 	height: 50px;
 	border: 2px solid $color-white;
@@ -129,14 +129,13 @@
 	text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
 	padding: 0;
 	position: absolute;
-	@include font(3.6, 3.6);
-	font-weight: 700;
-	letter-spacing: 13px;
+	@include font(5.6, 3.6);
+	font-weight: 200;
 	text-transform: uppercase;
 	width: 80%;
 	left: 10%;
 	text-align: center;
-	bottom: 50%;
+	bottom: 55%;
 	margin: 0 0 -50px 0;
 }
 
@@ -150,7 +149,7 @@
 	@include font(1.8, 2.6);
 	color: $color-white;
 	z-index: 2;
-	bottom: 50%;
+	bottom: 55%;
 	margin: 0 0 -125px 0;
 	padding: 0;
 }
@@ -161,7 +160,7 @@
 	text-align: center;
 	margin: 0 0 -225px 0;
 	z-index: 2;
-	bottom: 50%;
+	bottom: 55%;
 }
 
 /*
@@ -179,7 +178,7 @@
 .slider-link .button{
 	position:relative;
 	display:block;
-	border-bottom: 2px solid $color-white;
+	border-top: 2px solid $color-white;
     box-shadow: inset 0 0px 0 $color-white;
     text-decoration: none;
 	color: $color-white;
@@ -187,6 +186,7 @@
 	padding:10px 5px;
 	margin-bottom:20px;
 	background-color: transparent;
+	max-width:250px;
 	
 	-webkit-transition: box-shadow .3s ease-in-out;
 	-moz-transition:    box-shadow .3s ease-in-out;
@@ -197,8 +197,7 @@
 .slider-link .button:hover,
 .slider-link .button:focus {
 	color:$color-white;
-    border-bottom: 2px solid $color-white;
-    box-shadow: inset 0 -50px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 50px 0 rgba(255, 255, 255, 0.1);
 }
 
 
@@ -211,7 +210,13 @@
 	max-width: 400px;
 	position: relative;
 }
-
+.sl-slide a{
+	margin: 0 auto;
+	width: 60%;
+	width:90%;
+	max-width: 250px;
+	position: relative;
+}
 /* Custom background colors for slides in first demo */
 
 /* First Slide */

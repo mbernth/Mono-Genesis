@@ -49,12 +49,9 @@ p.entry-meta {
 }
 
 .entry-header .entry-meta {
-	margin-bottom: 24px;
 }
 
 .entry-footer .entry-meta {
-	border-top: 2px solid $color-white;
-	padding-top: 24px;
 }
 
 .entry-categories,
@@ -169,31 +166,3 @@ li.comment {
 	padding: 24px;
 }
 
-/* ## Work
---------------------------------------------- */
-
-.image-section{
-	background-attachment: scroll;
-    background-color: $color-black;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
-
-.single-work .entry-title {
-    position: absolute;
-    left: 5%;
-    bottom: 70px;
-	@include font(4.8, 4.2);
-	font-weight:100;
-    color: $color-white;
-}
-
-.single-work .entry-meta{
-	position:absolute;
-	left:5%;
-	bottom:50px;
-	color:$color-white;
-}

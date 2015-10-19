@@ -1,0 +1,98 @@
+/* ## Work
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Work archive
+--------------------------------------------- */
+
+.post-type-archive-work{
+	background-color:$color-black;
+}
+
+.post-type-archive-work .site-inner{
+	margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.post-type-archive-work article.type-work.entry{
+	position:relative;
+	display:block;
+	float:left;
+	@include grid(3, 0, 1200);
+	margin-bottom:0px;
+}
+
+.post-type-archive-work article.type-work a{
+	text-decoration:none;
+}
+
+.post-type-archive-work article.type-work a img {
+	-webkit-filter : grayscale(0%);
+	filter : grayscale(0%);
+	-webkit-transition: -webkit-filter 1s ease-in-out both;
+	transition: filter 1s ease-in-out both;
+}
+	
+.post-type-archive-work article.type-work a img:hover{
+	-webkit-filter : grayscale(75%);
+	filter : grayscale(75%);
+}
+
+.post-type-archive-work article.type-work .entry-title a,
+.post-type-archive-work article.type-work .entry-title a:hover{
+	color:$color-white;
+	text-decoration:none;
+	font-weight:100;
+}
+
+.post-type-archive-work article.type-work .entry-content{
+	display:none;
+}
+
+.post-type-archive-work article.type-work .entry-header{
+	display:block;
+	position:absolute;
+	z-index:1200;
+	color:$color-white;
+	left:5%;
+	bottom:10px;
+}
+/*
+.post-type-archive-work article.type-work p.entry-meta {
+	position:absolute;
+	z-index:1200;
+}
+*/
+.post-type-archive-work article.type-work .entry-footer{
+	position:absolute;
+	z-index:1200;
+}
+
+/* ## Work Entries
+--------------------------------------------- */
+
+.image-section{
+	background-attachment: scroll;
+    background-color: $color-black;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.single-work .entry-title {
+    position: absolute;
+    left: 5%;
+    bottom: 70px;
+	@include font(4.8, 4.2);
+	font-weight:100;
+    color: $color-white;
+}
+
+.single-work .entry-meta{
+	position:absolute;
+	left:5%;
+	bottom:50px;
+	color:$color-white;
+}

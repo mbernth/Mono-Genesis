@@ -54,7 +54,7 @@ remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 //* Remove site footer widgets
-remove_action( 'genesis_before_footer', 'genesis_footer_widget_areas' );
+// remove_action( 'genesis_before_footer', 'genesis_footer_widget_areas' );
 
 //* Remove site footer elements
 // remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
@@ -90,7 +90,7 @@ function full_screen_slider() {
 							echo 	'<div class="slider-text">' . $row['text']. '</div>';
 						}
 						if( $row['link'] ){
-							echo	'<div class="slider-link"><a class="button" href="' . $row['link']. '">See the case</a></div>';
+							echo	'<div class="slider-link"><a class="button" href="' . $row['link']. '">View the case</a></div>';
 						}
 						echo '</div> <!-- /sl-slide-inner -->';
 						

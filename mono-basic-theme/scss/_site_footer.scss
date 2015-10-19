@@ -4,14 +4,14 @@
 .site-footer {
 	position:relative;
 	z-index:1200;
-	background-color: darken($color-primary-one, 10%);
-	@include font(1.4, 2.0);
-	padding: 20px 0;
+	background-color: $color-white;
+	@include font(1.0, 1.2);
+	padding: 5px 0;
 	text-align: center;
 }
 
 .site-footer a{
-	color:$color-white;
+	color:$color-typo_black;
 	text-decoration:none;
 }
 
