@@ -108,5 +108,173 @@ function full_screen_slider() {
 	}
 }
 
+// check if the flexible content field has rows of data
+add_action( 'genesis_entry_content', 'fontpage_flexible_gridset', 15 );
+function fontpage_flexible_gridset() {
+	
+	if( have_rows('frontpage_content') ):
+
+		// loop through the rows of data
+    	while ( have_rows('frontpage_content') ) : the_row();
+
+        	if( get_row_layout() == 'full_width_column' ):
+				echo '<div ';
+					
+					if(get_sub_field("black_background")){
+        				echo 'class="gridcontainer black_background"';
+					}else{
+						echo 'class="gridcontainer"';
+					}
+					
+					echo ' style="';
+					
+					if(get_sub_field("background_colour")):
+						echo 'background-color:';
+							the_sub_field('background_colour');
+						echo '; ';
+					endif;
+					
+					if(get_sub_field("text_colour")):
+						echo 'color:';
+							the_sub_field('text_colour');
+						echo '; ';
+					endif;
+					
+				echo '">';
+					
+					echo '<div class="wrap">';
+					echo '<div class="coll1">';
+						if(get_sub_field("headline")):
+						echo '<h1 style="';
+							if(get_sub_field("text_colour")):
+								echo 'color:';
+									the_sub_field('text_colour');
+								echo '; ';
+							endif;
+						echo '">';
+							the_sub_field('headline');
+						echo '</h1>';
+						endif;
+						if(get_sub_field("gridset_1_1")):
+        					the_sub_field('gridset_1_1');
+						endif;
+					echo '</div>';
+					echo '</div>';
+					
+				echo '</div>';
+			
+			elseif( get_row_layout() == 'big_full_width_column' ):
+				echo '<div ';
+					
+					if(get_sub_field("black_background")){
+        				echo 'class="gridcontainer black_background"elsei>';
+					}else{
+						echo 'class="gridcontainer">';
+					}
+					
+					echo '<div class="wrap">';
+					echo '<div class="coll1">';
+						if(get_sub_field("headline")):
+						echo '<h1 style="';
+							if(get_sub_field("text_colour")):
+								echo 'color:';
+									the_sub_field('text_colour');
+								echo '; ';
+							endif;
+						echo '">';
+							the_sub_field('headline');
+						echo '</h1>';
+						endif;
+						if(get_sub_field("gridset_1_1")):
+        					the_sub_field('gridset_1_1');
+						endif;
+					echo '</div>';
+					echo '</div>';
+					
+				echo '</div>';
+			
+        	elseif( get_row_layout() == 'two_columns' ):
+				echo '<div ';
+					
+					if(get_sub_field("black_background")){
+        				echo 'class="gridcontainer black_background"';
+					}else{
+						echo 'class="gridcontainer"';
+					}
+					
+					echo ' style="';
+					
+					if(get_sub_field("background_colour")):
+						echo 'background-color:';
+							the_sub_field('background_colour');
+						echo '; ';
+					endif;
+					
+					if(get_sub_field("text_colour")):
+						echo 'color:';
+							the_sub_field('text_colour');
+						echo '; ';
+					endif;
+					
+				echo '">';
+				echo '<div class="wrap">';
+					echo '<div class="coll2">';
+        				the_sub_field('gridset_2_1');
+					echo '</div>';
+					echo '<div class="coll2">';
+						the_sub_field('gridset_2_2');
+					echo '</div>';
+				echo '</div>';
+				echo '</div>';
+				
+			elseif( get_row_layout() == 'three_columns' ):
+				echo '<div ';
+					
+					if(get_sub_field("black_background")){
+        				echo 'class="gridcontainer black_background"';
+					}else{
+						echo 'class="gridcontainer"';
+					}
+					
+					echo ' style="';
+					
+					if(get_sub_field("background_colour")):
+						echo 'background-color:';
+							the_sub_field('background_colour');
+						echo '; ';
+					endif;
+					
+					if(get_sub_field("text_colour")):
+						echo 'color:';
+							the_sub_field('text_colour');
+						echo '; ';
+					endif;
+					
+				echo '">';
+				echo '<div class="wrap">';
+					echo '<div class="coll3">';
+        				the_sub_field('gridset_3_1');
+					echo '</div>';
+					echo '<div class="coll3">';
+						the_sub_field('gridset_3_2');
+					echo '</div>';
+					echo '<div class="coll3">';
+						the_sub_field('gridset_3_3');
+					echo '</div>';
+				echo '</div>';
+				echo '</div>';
+				
+        	endif;
+
+    	endwhile;
+
+	else :
+
+    // no layouts found
+
+	endif;
+
+}
+
 //* Run the Genesis loop
 genesis();
