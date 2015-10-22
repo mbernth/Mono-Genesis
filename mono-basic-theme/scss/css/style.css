@@ -624,6 +624,7 @@ th {
 	- Site Containers
 	- Column Widths and Positions
 	- Column Classes
+	- Front Page
 */
 /* # Structure and Layout
 ---------------------------------------------------------------------------------------------------- */
@@ -638,12 +639,6 @@ th {
 .site-inner {
   clear: both;
   padding-top: 210px; }
-
-.front-page .site-container .site-inner {
-  margin-top: 0;
-  padding-top: 0;
-  width: 100%;
-  max-width: 100%; }
 
 /* ## Column Widths and Positions
 --------------------------------------------- */
@@ -740,6 +735,29 @@ th {
 .first {
   clear: both;
   margin-left: 0; }
+
+/* # Front Page
+---------------------------------------------------------------------------------------------------- */
+/* ## Site Container
+--------------------------------------------- */
+.front-page .site-container .site-inner {
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  max-width: 100%; }
+
+/* Grid Container
+--------------------------------------------- */
+.front-page .gridcontainer {
+  position: relative;
+  z-index: 1200;
+  -webkit-transform: translate3d(0, 0, 0);
+  display: block;
+  float: left;
+  width: 100%;
+  margin-bottom: 0px;
+  padding: 120px 0;
+  background-color: #ffffff; }
 
 /*
 - Grid
@@ -838,7 +856,7 @@ th {
     margin-right: 0; }
 
 .coll10 {
-  width: 7.0%; }
+  width: 7%; }
   .coll10:nth-child(n) {
     margin-right: 3.3333333333%; }
   .coll10:nth-child(10n) {
@@ -2628,6 +2646,7 @@ li.comment {
 .footer-widgets {
   position: relative;
   z-index: 1200;
+  -webkit-transform: translate3d(0, 0, 0);
   background-color: #000000;
   clear: both;
   padding-top: 100px; }

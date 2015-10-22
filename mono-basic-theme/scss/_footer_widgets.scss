@@ -11,6 +11,7 @@
 .footer-widgets {
 	position:relative;
 	z-index:1200;
+	-webkit-transform: translate3d(0, 0, 0);
 	background-color: $color-black;
 	clear: both;
 	padding-top: 100px;

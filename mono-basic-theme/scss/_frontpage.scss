@@ -1,0 +1,29 @@
+/* # Front Page
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Site Container
+--------------------------------------------- */
+
+.front-page .site-container .site-inner {
+    margin-top: 0;
+	padding-top:0;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Grid Container
+--------------------------------------------- */
+.front-page .gridcontainer {
+	position:relative;
+	z-index:1200;
+	-webkit-transform: translate3d(0, 0, 0);
+	display:block;
+	float:left;
+	width:100%;
+	margin-bottom:0px;
+	padding:120px 0;
+	background-color:$color-white;
+}
+
+.front-page .site-inner .gridcontainer [class*="coll"]{
+}

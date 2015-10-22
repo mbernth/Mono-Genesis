@@ -6,7 +6,7 @@ jQuery(function( $ ){
 		scrolltop = $(window).scrollTop()
 		scrollwindow = scrolltop + $(window).height();
 
-		$(".front-page-1").css("backgroundPosition", "50% " + (50-scrolltop/12) + "%");
+		$(".front-page-1").css("backgroundPosition", "50% " + (50-scrolltop/36) + "%");
 
 		if ( $(".home-section-3").length ) {
 		

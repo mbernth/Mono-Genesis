@@ -63,7 +63,7 @@ remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 
 // Fullscreen Slit Slider Widget
-add_action( 'genesis_entry_content', 'full_screen_slider', 15 );
+add_action( 'genesis_entry_content', 'full_screen_slider', 10 );
 function full_screen_slider() {
 	$rows = get_field( 'slider' );  //this is the ACF instruction to get everything in the repeater field
 	
