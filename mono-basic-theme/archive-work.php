@@ -31,7 +31,7 @@ function sk_display_featured_image() {
 	$image = genesis_get_image( $image_args );
  
 	if ( $image ) {
-		echo '<a href="' . get_permalink() . '">' . $image .'</a>';
+		echo '<div class="image-background hover-out"><a href="' . get_permalink() . '">' . $image .'</a></div>';
 	}
  
 }
