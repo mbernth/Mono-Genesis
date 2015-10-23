@@ -759,6 +759,19 @@ th {
   padding: 120px 0;
   background-color: #ffffff; }
 
+.gridcontainer.black_background {
+  background-color: #000000;
+  color: #ffffff; }
+
+.gridcontainer.black_background h1,
+.gridcontainer.black_background h2,
+.gridcontainer.black_background h3,
+.gridcontainer.black_background h4,
+.gridcontainer.black_background h5,
+.gridcontainer.black_background h6 {
+  color: #ffffff;
+  font-weight: 200; }
+
 /*
 - Grid
 	- Grid Container
@@ -2058,7 +2071,7 @@ img.alignright,
   position: fixed;
   background-color: transparent;
   width: 100%;
-  padding: 75px 0 0 0;
+  padding: 15px 0 0 0;
   z-index: 2000;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -2071,7 +2084,8 @@ img.alignright,
 
 .site-header .wrap {
   padding: 0px 0;
-  width: 90%; }
+  width: 90%;
+  max-width: 100%; }
 
 .site-header.dark {
   background-color: rgba(0, 0, 0, 0.95);
@@ -2109,9 +2123,6 @@ img.alignright,
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
 
-.site-header.dark .wrap {
-  width: 100%; }
-
 .nav-primary {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -2124,7 +2135,7 @@ img.alignright,
 .title-area {
   float: left;
   padding: 0;
-  width: 100%; }
+  width: 198px; }
 
 .site-title {
   font-size: 32px;
@@ -2141,10 +2152,10 @@ img.alignright,
 .header-image .site-title > a {
   display: block;
   margin: 0 auto;
-  background: url(images/monovoce_logo_negative.svg) no-repeat;
+  background: url(images/monovoce_logo_negative.svg) no-repeat left top;
   width: 198px;
   height: 36px;
-  margin-bottom: 25px; }
+  margin-bottom: 0px; }
 
 .site-description {
   font-size: 16px;
@@ -2311,9 +2322,12 @@ img.alignright,
 --------------------------------------------- */
 .nav-primary {
   display: block;
-  float: left;
-  width: 100%;
-  text-align: center; }
+  float: right;
+  width: auto;
+  text-align: right; }
+
+.nav-primary .wrap {
+  width: 100%; }
 
 .nav-primary .genesis-nav-menu a {
   box-shadow: inset 0 0px 0 #ffffff;

@@ -52,6 +52,7 @@ function work_read_more_link() {
 	return '<a class="button work-btn" href="' . get_permalink() . '">See what we did</a>';
 }
 
+add_action( 'genesis_entry_header', 'genesis_do_post_title' );
 
 //* Run the Genesis loop
 genesis();

@@ -25,5 +25,20 @@
 	background-color:$color-white;
 }
 
+.gridcontainer.black_background {
+	background-color:$color-black;
+	color:$color-white;
+}
+
+.gridcontainer.black_background h1,
+.gridcontainer.black_background h2,
+.gridcontainer.black_background h3,
+.gridcontainer.black_background h4,
+.gridcontainer.black_background h5,
+.gridcontainer.black_background h6 {
+	color:$color-white;
+	font-weight:200;
+}
+
 .front-page .site-inner .gridcontainer [class*="coll"]{
 }

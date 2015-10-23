@@ -261,6 +261,10 @@ function mono_flexible_gridset() {
 }
 add_action( 'genesis_entry_content', 'mono_flexible_gridset', 15 );
 
+//* Reorder the entry title (requires HTML5 theme support)
+remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+add_action ( 'genesis_after_header', 'genesis_do_post_title', 9 );
+
 
 //* Modify the Genesis content limit read more link
 add_filter( 'get_the_content_more_link', 'sp_read_more_link' );

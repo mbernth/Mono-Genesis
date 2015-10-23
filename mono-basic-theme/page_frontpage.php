@@ -167,7 +167,7 @@ function fontpage_flexible_gridset() {
 				echo '<div ';
 					
 					if(get_sub_field("black_background")){
-        				echo 'class="gridcontainer black_background"elsei>';
+        				echo 'class="gridcontainer black_background">';
 					}else{
 						echo 'class="gridcontainer">';
 					}

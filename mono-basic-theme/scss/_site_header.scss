@@ -14,7 +14,7 @@
 	position:fixed;
 	background-color: rgba(0, 0, 0, 0);
 	width:100%;
-	padding:75px 0 0 0;
+	padding:15px 0 0 0;
 	z-index:2000;
 	
 	-webkit-transition: all 0.4s ease-in-out;
@@ -30,7 +30,8 @@
 
 .site-header .wrap {
 	padding: 0px 0;
-	width:90%;	
+	width:90%;
+	max-width:100%;
 }
 
 .site-header.dark {
@@ -73,7 +74,6 @@
 	transition: all 0.4s ease-in-out ; 
 }
 .site-header.dark .wrap {
-	width:100%;
 }
 .nav-primary {
 	-webkit-transition: all 0.4s ease-in-out ;
@@ -89,7 +89,7 @@
 .title-area {
 	float: left;
 	padding: 0;
-	width: 100%;
+	width: 198px;
 }
 
 .header-full-width .title-area {
@@ -109,10 +109,10 @@
 .header-image .site-title > a {
 	display:block;
 	margin:0 auto;
-	background: url(images/monovoce_logo_negative.svg) no-repeat;
+	background: url(images/monovoce_logo_negative.svg) no-repeat left top;
 	width:198px;
 	height: 36px;
-	margin-bottom:25px;
+	margin-bottom:0px;
 }
 
 .site-description {

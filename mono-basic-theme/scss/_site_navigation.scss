@@ -153,9 +153,13 @@
 
 .nav-primary {
 	display:block;
-	float:left;
+	float:right;
+	width:auto;
+	text-align:right;
+}
+
+.nav-primary .wrap{
 	width:100%;
-	text-align:center;
 }
 
 .nav-primary .genesis-nav-menu {
