@@ -12,6 +12,7 @@
 	margin: 0 auto;
     width: 100%;
     max-width: 100%;
+	padding-top: 0px;
 }
 
 .post-type-archive-work article.type-work a{
@@ -143,6 +144,7 @@ article.work:hover .hover-out {
     background-size: cover;
 }
 
+.page .entry-title,
 .single-work .entry-title {
     position: absolute;
     left: 5%;
@@ -150,6 +152,12 @@ article.work:hover .hover-out {
 	@include font(4.8, 4.2);
 	font-weight:100;
     color: $color-white;
+}
+
+.page .image-section {
+	/*
+	background:url(images/pattern_01.png);
+	*/
 }
 
 .single-work .entry-meta{

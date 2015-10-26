@@ -20,6 +20,7 @@ add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_c
  
 //* Remove entry meta in entry header
 remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+add_action( 'genesis_entry_header', 'genesis_do_post_title' );
  
 //* Remove default post image
 remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
@@ -52,7 +53,7 @@ function work_read_more_link() {
 	return '<a class="button work-btn" href="' . get_permalink() . '">See what we did</a>';
 }
 
-add_action( 'genesis_entry_header', 'genesis_do_post_title' );
+
 
 //* Run the Genesis loop
 genesis();

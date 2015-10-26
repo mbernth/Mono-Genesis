@@ -25,8 +25,12 @@ function mono_enqueue_scripts_styles() {
 
 	wp_enqueue_script( 'mono-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
-
+	
+	if ( (is_single() || is_page()) ) :
+		wp_enqueue_script( 'mono-jquery', get_bloginfo( 'stylesheet_directory' ) . '/js/jquery.min.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'mono-image-height', get_stylesheet_directory_uri() . '/js/image.height.js', array( 'jquery' ), '1.0.0', true );
+	endif;
+	
 }
 
 //* Add Accessibility support
@@ -264,6 +268,23 @@ add_action( 'genesis_entry_content', 'mono_flexible_gridset', 15 );
 //* Reorder the entry title (requires HTML5 theme support)
 remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 add_action ( 'genesis_after_header', 'genesis_do_post_title', 9 );
+
+//* DISPLAY FULL WIDTH FEATURED IMAGE ON STATIC PAGES
+add_action ( 'genesis_after_header', 'single_post_featured_image', 15 );
+function single_post_featured_image() {
+	if ( (is_single() || is_page()) && has_post_thumbnail() ) :
+		
+		$img = genesis_get_image( array( 'format' => 'src' ) );
+		printf( '<div class="image-section" style="background-image:url(%s);"></div>', $img );
+		
+		elseif( (! is_front_page()) ):
+		printf( '<div class="image-section" style="background-color:#231f20;"></div>', $img );
+		
+		
+	endif;
+	
+}
+
 
 
 //* Modify the Genesis content limit read more link

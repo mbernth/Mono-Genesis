@@ -638,7 +638,7 @@ th {
 
 .site-inner {
   clear: both;
-  padding-top: 210px; }
+  padding-top: 70px; }
 
 /* ## Column Widths and Positions
 --------------------------------------------- */
@@ -2541,7 +2541,8 @@ li.comment {
 .post-type-archive-work .site-inner {
   margin: 0 auto;
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  padding-top: 0px; }
 
 .post-type-archive-work article.type-work a {
   text-decoration: none; }
@@ -2664,6 +2665,7 @@ article.work:hover .hover-out {
   -moz-background-size: cover;
   background-size: cover; }
 
+.page .entry-title,
 .single-work .entry-title {
   position: absolute;
   left: 5%;
@@ -2674,6 +2676,11 @@ article.work:hover .hover-out {
   line-height: 4.2rem;
   font-weight: 100;
   color: #ffffff; }
+
+.page .image-section {
+  /*
+  background:url(images/pattern_01.png);
+  */ }
 
 .single-work .entry-meta {
   position: absolute;

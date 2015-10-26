@@ -11,12 +11,13 @@
 Template Name: Work Single
 */
 
+/*
 add_action( 'wp_enqueue_scripts', 'mono_enqueue_work_script' );
 function mono_enqueue_work_script() {
 	wp_enqueue_script( 'mono-jquery', get_bloginfo( 'stylesheet_directory' ) . '/js/jquery.min.js', array( 'jquery' ), '1.0.0', true );
 	wp_enqueue_script( 'mono-image-height', get_stylesheet_directory_uri() . '/js/image.height.js', array( 'jquery' ), '1.0.0', true );
 }
-
+*/
 
 //* Reposition Breadcrumbs
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
@@ -104,29 +105,6 @@ add_action( 'genesis_entry_content', 'mono_flexible_fields', 15 );
 //* To remove empty markup, '<p class="entry-meta"></p>' for entries that have not been assigned to any Genre
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 add_action ( 'genesis_after_header', 'genesis_post_meta', 9 );
-
-//* DISPLAY FULL WIDTH FEATURED IMAGE ON STATIC PAGES
-add_action ( 'genesis_after_header', 'full_featured_image', 9 );
-/**
- * Display Featured image after header.
- * 
- * Only on the first page when the Page or Post is divided into multiple
- * using next page quicktag.
- *
- * Scope: static Pages and single Posts.
- *
- * @author Sridhar Katakam
- * @author Gary Jones
- * @link   http://sridharkatakam.com/link-to-your-tutorial
- */
-function full_featured_image() {
-	if ( ! is_singular() )
-		return;
-		$img = genesis_get_image( array( 'format' => 'url') );
-		//* printf( '<div class="bigImage">%s</div>', $img );
-		printf( '<div class="image-section" style="background-image:url(%s);"></div>', $img );
-}
-//* ============================
 
 //* Run the Genesis loop
 genesis();

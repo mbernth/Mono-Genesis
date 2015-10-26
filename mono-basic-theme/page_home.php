@@ -44,7 +44,7 @@ function mono_add_body_class( $classes ) {
 add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
 
 //* Remove the entry title
-remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+remove_action( 'genesis_after_header', 'genesis_do_post_title', 9 );
 remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
 remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
 
