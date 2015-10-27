@@ -265,6 +265,38 @@ function mono_flexible_gridset() {
 }
 add_action( 'genesis_entry_content', 'mono_flexible_gridset', 15 );
 
+// check if the Push content field has data
+add_action( 'genesis_after', 'mono_push_content', 15 );
+function mono_push_content() {
+	$rows = get_field( 'push_content' );  //this is the ACF instruction to get everything in the repeater field
+	
+	if ( is_single() || is_page() ) {
+		
+		if($rows) {
+			
+			echo '<div class="overlay overlay-contentpush">';
+			echo '<button type="button" class="overlay-close">Close</button>';
+			echo '' . $row['push_content']. '';
+			echo '</div>';
+									  
+		}
+		
+	}
+}
+add_action( 'wp_enqueue_scripts', 'push_scripts_styles' );
+function push_scripts_styles() {
+	$push = get_field( 'push_content' );  //this is the ACF instruction to get everything in the repeater field
+	
+	if ( is_single() || is_page() ) {
+		
+		if($push) {
+		wp_enqueue_script( 'push-modernizr-script', get_bloginfo( 'stylesheet_directory' ) . '/js/modernizr.custom.push.js', array( 'jquery' ), '1.0.0' );
+		wp_enqueue_script( 'classie-script', get_bloginfo( 'stylesheet_directory' ) . '/js/classie.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'push-script', get_stylesheet_directory_uri() . '/js/push.js', array( 'jquery' ), '1.0.0', true );
+		}
+	}
+}
+
 //* Reorder the entry title (requires HTML5 theme support)
 remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 add_action ( 'genesis_after_header', 'genesis_do_post_title', 9 );
