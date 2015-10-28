@@ -190,6 +190,19 @@ function fontpage_flexible_gridset() {
 					echo '</div>';
 					
 				echo '</div>';
+				
+			elseif( get_row_layout() == 'full_width_image' ):
+				echo '<div class="gridcontainer">';
+					
+						echo '<div class="coll1">';
+							if(get_sub_field("big_image")):
+								echo '<img src="';
+        						the_sub_field('big_image');
+								echo '">';
+							endif;
+						echo '</div>';
+					
+				echo '</div>';
 			
         	elseif( get_row_layout() == 'two_columns' ):
 				echo '<div ';

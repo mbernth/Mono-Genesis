@@ -190,6 +190,40 @@ function fontpage_flexible_gridset() {
 					echo '</div>';
 					
 				echo '</div>';
+				
+			elseif( get_row_layout() == 'full_width_image' ):
+				echo '<div class="gridcontainer image_container">';
+					
+						echo '<div class="coll1">';
+							if(get_sub_field("big_image")):
+        						echo '<img src="';
+        							the_sub_field('big_image');
+								echo '">';
+							endif;
+						echo '</div>';
+					
+				echo '</div>';
+				
+			elseif( get_row_layout() == 'two_columns_image' ):
+				echo '<div class="gridcontainer image_container">';
+					
+						echo '<div class="coll2">';
+							if(get_sub_field("image_left")):
+        						echo '<img src="';
+        							the_sub_field('image_left');
+								echo '">';
+							endif;
+						echo '</div>';
+						
+						echo '<div class="coll2">';
+							if(get_sub_field("image_right")):
+        						echo '<img src="';
+        							the_sub_field('image_right');
+								echo '">';
+							endif;
+						echo '</div>';
+					
+				echo '</div>';
 			
         	elseif( get_row_layout() == 'two_columns' ):
 				echo '<div ';

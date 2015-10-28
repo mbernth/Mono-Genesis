@@ -49,6 +49,60 @@ a:focus {
 	text-decoration: none;
 }
 
+/* Contence links
+------------------------------- */
+
+/* Text scale */
+.entry-content a {
+	position:relative;
+	padding: 0 0.25em;
+	font-weight: 500;
+	-webkit-transition: color 0.6s ease-in-out;
+	transition: color 0.6s ease-in-out;
+	text-decoration:none;
+}
+
+.entry-content a:hover {
+	color: $color-black;
+}
+
+
+.entry-content a::before,
+.entry-content a::after {
+	position: absolute;
+	top: 0;
+	font-weight: 100;
+	font-size: 110%;
+	line-height: 1;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+	transition: opacity 0.2s, transform 0.2s;
+}
+
+.entry-content a::before {
+	left: -0.1em;
+	content: '[';
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.entry-content a::after {
+	right: -0.1em;
+	content: ']';
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.entry-content a:hover::before,
+.entry-content a:hover::after {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+/* End
+------------------------------- */
+
 p {
 	margin: 0 0 28px;
 	padding: 0;
