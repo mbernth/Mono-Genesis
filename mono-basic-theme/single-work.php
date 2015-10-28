@@ -49,44 +49,223 @@ function sk_show_featured_image_single_case_pages() {
  
 }
 
+// check if the Work content field has data
+add_action( 'genesis_entry_content', 'mono_work_content', 10 );
+function mono_work_content() {
+	$client = get_field( 'client' );
+	$website = get_field( 'website' );
+	$brief = get_field( 'brief' );
+		
+		if( $client || $website || $brief ) {
+			
+			echo '<div class="gridcontainer float_aside_content">';
+			echo '<div class="wrap">';
+				echo '<div class="coll_main">';
+						echo '' . $brief. '';
+				echo '</div>';
+				echo '<aside class="coll_aside">';
+						echo '<h3>The Client</h3>
+							  <h5>' . $client. '</h5>';
+					if( $client || $website ) {
+						echo '<h3 class="aside_link_title">Visit the website</h3>
+							  <a href="' . $website. '" target="_blank">' . $website. '</a>';
+					}
+				echo '</aside>';
+			echo '</div>';
+			echo '</div>';
+									  
+		}
 
+}
 
 // check if the flexible content field has rows of data
-function mono_flexible_fields() {
+add_action( 'genesis_entry_content', 'fontpage_flexible_gridset', 15 );
+function fontpage_flexible_gridset() {
 	
-	if( have_rows('content') ):
+	if( have_rows('frontpage_content') ):
 
 		// loop through the rows of data
-    	while ( have_rows('content') ) : the_row();
+    	while ( have_rows('frontpage_content') ) : the_row();
 
         	if( get_row_layout() == 'full_width_column' ):
-				echo '<div class="gridcontainer">';
-					echo '<div class="gridcoll-all">';
-        				the_sub_field('full_width');
+				echo '<div ';
+					
+					if(get_sub_field("black_background")){
+        				echo 'class="gridcontainer black_background"';
+					}else{
+						echo 'class="gridcontainer"';
+					}
+					
+					echo ' style="';
+					
+					if(get_sub_field("background_colour")):
+						echo 'background-color:';
+							the_sub_field('background_colour');
+						echo '; ';
+					endif;
+					
+					if(get_sub_field("text_colour")):
+						echo 'color:';
+							the_sub_field('text_colour');
+						echo '; ';
+					endif;
+					
+				echo '">';
+					
+					echo '<div class="wrap">';
+					echo '<div class="coll1">';
+						if(get_sub_field("headline")):
+						echo '<h1 style="';
+							if(get_sub_field("text_colour")):
+								echo 'color:';
+									the_sub_field('text_colour');
+								echo '; ';
+							endif;
+						echo '">';
+							the_sub_field('headline');
+						echo '</h1>';
+						endif;
+						if(get_sub_field("gridset_1_1")):
+        					the_sub_field('gridset_1_1');
+						endif;
 					echo '</div>';
+					echo '</div>';
+					
+				echo '</div>';
+			
+			elseif( get_row_layout() == 'big_full_width_column' ):
+				echo '<div ';
+					
+					if(get_sub_field("black_background")){
+        				echo 'class="gridcontainer black_background">';
+					}else{
+						echo 'class="gridcontainer">';
+					}
+					
+					echo '<div class="wrap">';
+					echo '<div class="coll1">';
+						if(get_sub_field("headline")):
+						echo '<h1 style="';
+							if(get_sub_field("text_colour")):
+								echo 'color:';
+									the_sub_field('text_colour');
+								echo '; ';
+							endif;
+						echo '">';
+							the_sub_field('headline');
+						echo '</h1>';
+						endif;
+						if(get_sub_field("gridset_1_1")):
+        					the_sub_field('gridset_1_1');
+						endif;
+					echo '</div>';
+					echo '</div>';
+					
 				echo '</div>';
 				
+			elseif( get_row_layout() == 'full_width_image' ):
+				echo '<div class="gridcontainer image_container">';
+					
+						echo '<div class="coll1">';
+							if(get_sub_field("big_image")):
+        						echo '<img src="';
+        							the_sub_field('big_image');
+								echo '">';
+							endif;
+						echo '</div>';
+					
+				echo '</div>';
+				
+			elseif( get_row_layout() == 'two_columns_image' ):
+				echo '<div class="gridcontainer image_container">';
+					
+						echo '<div class="coll2">';
+							if(get_sub_field("image_left")):
+        						echo '<img src="';
+        							the_sub_field('image_left');
+								echo '">';
+							endif;
+						echo '</div>';
+						
+						echo '<div class="coll2">';
+							if(get_sub_field("image_right")):
+        						echo '<img src="';
+        							the_sub_field('image_right');
+								echo '">';
+							endif;
+						echo '</div>';
+					
+				echo '</div>';
+			
         	elseif( get_row_layout() == 'two_columns' ):
-				echo '<div class="gridcontainer">';
-					echo '<div class="gridcoll3">';
-        				the_sub_field('left_column');
+				echo '<div ';
+					
+					if(get_sub_field("black_background")){
+        				echo 'class="gridcontainer black_background"';
+					}else{
+						echo 'class="gridcontainer"';
+					}
+					
+					echo ' style="';
+					
+					if(get_sub_field("background_colour")):
+						echo 'background-color:';
+							the_sub_field('background_colour');
+						echo '; ';
+					endif;
+					
+					if(get_sub_field("text_colour")):
+						echo 'color:';
+							the_sub_field('text_colour');
+						echo '; ';
+					endif;
+					
+				echo '">';
+				echo '<div class="wrap">';
+					echo '<div class="coll2">';
+        				the_sub_field('gridset_2_1');
 					echo '</div>';
-					echo '<div class="gridcoll3">';
-						the_sub_field('right_column');
+					echo '<div class="coll2">';
+						the_sub_field('gridset_2_2');
 					echo '</div>';
+				echo '</div>';
 				echo '</div>';
 				
 			elseif( get_row_layout() == 'three_columns' ):
-				echo '<div class="gridcontainer">';
-					echo '<div class="gridcoll2">';
-        				the_sub_field('left_column');
+				echo '<div ';
+					
+					if(get_sub_field("black_background")){
+        				echo 'class="gridcontainer black_background"';
+					}else{
+						echo 'class="gridcontainer"';
+					}
+					
+					echo ' style="';
+					
+					if(get_sub_field("background_colour")):
+						echo 'background-color:';
+							the_sub_field('background_colour');
+						echo '; ';
+					endif;
+					
+					if(get_sub_field("text_colour")):
+						echo 'color:';
+							the_sub_field('text_colour');
+						echo '; ';
+					endif;
+					
+				echo '">';
+				echo '<div class="wrap">';
+					echo '<div class="coll3">';
+        				the_sub_field('gridset_3_1');
 					echo '</div>';
-					echo '<div class="gridcoll2">';
-						the_sub_field('middle_column');
+					echo '<div class="coll3">';
+						the_sub_field('gridset_3_2');
 					echo '</div>';
-					echo '<div class="gridcoll2">';
-						the_sub_field('right_column');
+					echo '<div class="coll3">';
+						the_sub_field('gridset_3_3');
 					echo '</div>';
+				echo '</div>';
 				echo '</div>';
 				
         	endif;
@@ -100,7 +279,7 @@ function mono_flexible_fields() {
 	endif;
 
 }
-add_action( 'genesis_entry_content', 'mono_flexible_fields', 15 );
+
  
 //* To remove empty markup, '<p class="entry-meta"></p>' for entries that have not been assigned to any Genre
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );

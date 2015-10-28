@@ -8,7 +8,8 @@
 	background-color:$color-black;
 }
 
-.post-type-archive-work .site-inner{
+.post-type-archive-work .site-inner,
+.single-work .site-inner{
 	margin: 0 auto;
     width: 100%;
     max-width: 100%;
@@ -63,15 +64,15 @@
 
 /* Entry
 ---------------------- */
-article.work{
+.post-type-archive-work  article.work{
 	position:relative;
 	display:block;
 	float:left;
-	@include grid(2, 0, 1200);
+	@include grid(5, 0, 1200);
 	margin-bottom:0px;
 }
 
-article.work{
+.post-type-archive-work  article.work{
 	overflow: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -80,7 +81,7 @@ article.work{
 	background-color:$color-black;
 }
 
-article.work::after{
+.post-type-archive-work  article.work::after{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -88,7 +89,7 @@ article.work::after{
     left: 0;
 }
 
-article.work::after{
+.post-type-archive-work  article.work::after{
 	content: '';
     background-color: inherit;
     -webkit-transition: 3s -webkit-transform cubic-bezier(.23,1,.32,1);
@@ -98,7 +99,7 @@ article.work::after{
     transform: scale(2) translateX(-100%) translateY(-100%) translateZ(0) rotate(-45deg);
 }
 
-article.work:hover::after {
+.post-type-archive-work article.work:hover::after {
     -webkit-transform: scale(2) rotate(-45deg) translateZ(0);
     transform: scale(2) rotate(-45deg) translateZ(0);
     -webkit-transition-duration: 1s;
@@ -134,6 +135,56 @@ article.work:hover .hover-out {
 /* ## Work Entries
 --------------------------------------------- */
 
+/* Category links */
+.single-work .entry-categories a{
+	color:$color-white;
+	text-decoration:none;
+	font-family:$font-headlines;
+	position:relative;
+	padding: 0 0.25em;
+	-webkit-transition: color 0.6s ease-in-out;
+	transition: color 0.6s ease-in-out;
+	text-decoration:none;
+}
+
+.single-work .entry-categories a:hover {
+	color: $color-white;
+}
+
+.single-work .entry-categories a::before,
+.single-work .entry-categories a::after {
+	position: absolute;
+	top: 0;
+	font-weight: 100;
+	font-size: 110%;
+	line-height: 1;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+	transition: opacity 0.2s, transform 0.2s;
+}
+
+.single-work .entry-categories a::before {
+	left: -0.1em;
+	content: '[';
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.single-work .entry-categories a::after {
+	right: -0.1em;
+	content: ']';
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.single-work .entry-categories a:hover::before,
+.single-work .entry-categories a:hover::after {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+/* Category links End */
+
 .image-section{
 	background-attachment: scroll;
     background-color: $color-black;
@@ -165,4 +216,20 @@ article.work:hover .hover-out {
 	left:5%;
 	bottom:50px;
 	color:$color-white;
+}
+
+.single-work .entry {
+    margin-bottom: 0px;
+}
+
+.single-work .gridcontainer {
+	padding:120px 0;
+}
+
+.single-work .coll_aside h3,
+.single-work .coll_aside .aside_link_title{
+	border-bottom:1px solid $color-black;
+}
+.aside_link_title{
+	margin-top:40px;
 }

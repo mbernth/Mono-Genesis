@@ -276,7 +276,7 @@ function mono_push_content() {
 			
 			echo '<div class="overlay overlay-contentpush">';
 			echo '<button type="button" class="overlay-close">Close</button>';
-			echo '' . $row['push_content']. '';
+			echo '' . $rows. '';
 			echo '</div>';
 									  
 		}

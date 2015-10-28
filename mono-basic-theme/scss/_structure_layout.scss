@@ -38,7 +38,8 @@
 
 /* ### Content */
 
-.content {
+.content,
+.coll_main {
 	float: right;
 	@include structure(800, 1200);
 }
@@ -61,13 +62,15 @@
 
 /* ### Primary Sidebar */
 
-.sidebar-primary {
+.sidebar-primary,
+.coll_aside {
 	float: right;
 	@include structure(360, 1200);
 }
 
 .sidebar-content .sidebar-primary,
-.sidebar-sidebar-content .sidebar-primary {
+.sidebar-sidebar-content .sidebar-primary,
+.gridcontainer.float_aside_content .coll_aside {
 	float: left;
 }
 
