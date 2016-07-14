@@ -324,3 +324,17 @@ add_filter( 'get_the_content_more_link', 'sp_read_more_link' );
 function sp_read_more_link() {
 	return '<a class="button" href="' . get_permalink() . '">Read more</a>';
 }
+
+// Random image test
+add_action( 'genesis_entry_content', 'random_image', 10 );
+function random_image() {
+	$rows = get_field( 'random' );
+	$row_count = count($rows);
+	$i = rand(0, $row_count - 1);
+	
+	echo '<img src="';
+	echo $rows[ $i ] ['image'];
+	echo '"><h2>';
+	echo $rows[ $i ] ['titel'];
+	echo '</h2>';
+}
